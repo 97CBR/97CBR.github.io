@@ -303,13 +303,13 @@ ICP:
 
 ####   Analysis    ####
 # ---------------
-baidu_analytics:
+baidu_analytics: d5744edc3eef0ce8ae56f7244f36ab4e
 
 # Google Analytics
-google_analytics:
+google_analytics: UA-161658862-1
 
 # Tencent_analytics ID
-tencent_analytics:
+tencent_analytics: 66535546
 
 # Ads
 # ---------------
@@ -327,15 +327,15 @@ google_site_verification:
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-bing_site_verification:
+bing_site_verification: 9938564540a44f17a252a4b9fc6e90a1
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification:
+baidu_site_verification: Ap77QKr8AM0tEODq
 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
-qihu_site_verification:
+qihu_site_verification: d182b3f28525f2db83acfaaf6e696dba
 
 # 打賞按鈕
 reward:
@@ -596,7 +596,7 @@ snackbar:
 
 #百度推送
 baidu_push:
-  enable: false
+  enable: true
 
 # https://instant.page/
 # prefetch預加載

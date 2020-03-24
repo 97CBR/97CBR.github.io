@@ -1,0 +1,13 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: MarxCBR-CNBLOG
+      link: https://www.cnblogs.com/marxcbr
+      avatar: https://profile.csdnimg.cn/1/2/7/1_cbr97
+      descr: 博客园MarxCBR
+    2:
+      name: MarxCBR
+      link: https://blog.marxcbr.cn/
+      avatar: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/avatar.png
+      descr: MarxCBR的小屋
