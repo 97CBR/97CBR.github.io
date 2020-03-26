@@ -45,14 +45,16 @@ code_word_wrap: false
 # copyright 複製的內容後面加上版權信息
 copy:
   enable: true # true 開啟 / false 禁止
-  copyright: false
+  copyright: true
 
 # social settings
 # formal:
 #   icon: link
 # ---------------
 social:
-  fa fa-github: https://github.com/97CBR
+  fab fa-github: https://github.com/97CBR
+  fab fa-qq: tencent://AddContact/?fromSubId=1&subcmd=all&uin=824368602&website=www.marxcbr.cn
+  fab fa-zhihu: https://www.zhihu.com/people/bo-ren-11-27
   fa fa-envelope: mailto:824368602@qq.com
   fa fa-rss: /atom.xml
 
@@ -501,7 +503,7 @@ subtitle:
 # fontawesome圖標
 # 默認使用的是 fontawesome v4版本的圖標
 fontawesome_v5:
-  enable: false
+  enable: true
 
 ####    側邊欄    ####
 #-------------------------------------
