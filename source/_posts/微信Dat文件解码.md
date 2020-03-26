@@ -4,7 +4,7 @@ tags:
   - 破解
   - 微信
   - Python
-categories: 工具
+categories: Python
 keywords:
   - 破解
   - 微信

@@ -303,21 +303,21 @@ ICP:
 
 ####   Analysis    ####
 # ---------------
-baidu_analytics: d5744edc3eef0ce8ae56f7244f36ab4e
+baidu_analytics: 5e6c16262ff982855cfe514c1c0ca346
 
 # Google Analytics
 google_analytics: UA-161658862-1
 
 # Tencent_analytics ID
-tencent_analytics: 66535546
+tencent_analytics: 66536458
 
 # Ads
 # ---------------
 # Google Adsense
 google_adsense:
-  enable: false
+  enable: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client:
+  client: ca-pub-5274001498594547
   enable_page_level_ads: true
 
 ####    站長驗證    ####
@@ -534,7 +534,7 @@ busuanzi:
 # 也可以寫成 年/月/日 時間
 runtimeshow:
   enable: true
-  start_date: 6/7/2018 00:00:00
+  start_date: 6/2/2017 00:00:00
 
 ####   右下角按鈕  ####
 #----------------------------------------------

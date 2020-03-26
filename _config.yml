@@ -14,7 +14,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.marxcbr.cn
+url: http://www.marxcbr.cn
 root: /
 # permalink: :year/:month/:day/:title/
 permalink: archives/:abbrlink.html
@@ -91,7 +91,7 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include: baidu_verify_m66cjsb1nu.html,google3d1eed5d04e9f243.html
+include:
 exclude:
 ignore:
 
