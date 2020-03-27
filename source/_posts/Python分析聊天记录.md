@@ -3,11 +3,11 @@ title: Python分析聊天记录
 tags:
   - Python
   - 数据可视化
-  - 有趣的玩意
+  - 有趣的东西
 categories: Python
 keywords:
   - 数据可视化
-  - 有趣的玩意
+  - 有趣的东西
 description: 用Python分析一下和妹纸聊天的内容
 cover: >-
   https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-11-23/Python分析聊天记录/1574474939006.png

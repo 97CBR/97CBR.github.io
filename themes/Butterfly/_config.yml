@@ -45,7 +45,7 @@ code_word_wrap: false
 # copyright 複製的內容後面加上版權信息
 copy:
   enable: true # true 開啟 / false 禁止
-  copyright: true
+  copyright: false
 
 # social settings
 # formal:

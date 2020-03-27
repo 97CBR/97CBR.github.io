@@ -3,12 +3,12 @@ title: NAS邮件服务器
 tags:
   - NAS
   - 工具
-  - 有趣的玩意
+  - 有趣的东西
 categories: NAS
 keywords:
   - NAS
   - 邮件服务器
-  - 有趣的玩意
+  - 有趣的东西
 description: 在NAS里面搭建起属于我们自己的邮箱
 cover: >-
   https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585214641951.png
