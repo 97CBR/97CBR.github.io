@@ -42,7 +42,7 @@ if theme.subtitle.enable
         if (subtitleEffect){
           let from = '出自 ' + data.from
           let sub = '!{theme.subtitle.sub}'.length == 0  ? new Array() : '!{theme.subtitle.sub}'.split(",");
-          let both = sub.unshift(data.hitokoto,from)  
+          let both = sub.unshift(data.hitokoto,from)
           let typed = new Typed("#subtitle", {
             strings: sub,
             startDelay: 300,
@@ -51,7 +51,7 @@ if theme.subtitle.enable
             backSpeed: 50
           });
         }else{
-          document.getElementById("subtitle").innerHTML = data.hitokoto        
+          document.getElementById("subtitle").innerHTML = data.hitokoto
         }
       })
       .catch(function (err) {
@@ -95,7 +95,7 @@ if theme.subtitle.enable
             backSpeed: 50
           });
         }else{
-          document.getElementById("subtitle").innerHTML = result.data.content        
+          document.getElementById("subtitle").innerHTML = result.data.content
         }
       })
 
@@ -103,7 +103,7 @@ if theme.subtitle.enable
     - var subtitle = theme.subtitle.sub[0]
     script.
       let subtitleEffect = !{subtitleEffect}
-      if (subtitleEffect){ 
+      if (subtitleEffect){
         let typed = new Typed("#subtitle", {
           strings: '!{theme.subtitle.sub}'.split(","),
           startDelay: 300,

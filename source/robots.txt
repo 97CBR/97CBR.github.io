@@ -1,11 +1,10 @@
-# welcome to : blog.marxcbr.cn
+# welcome to : www.marxcbr.cn
 User-agent: *
 Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
 Allow: /link/
-Allow: /about/
 Allow: /music/
 Allow: /movies/
 

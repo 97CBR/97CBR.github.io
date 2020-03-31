@@ -2,12 +2,17 @@ class:
   class_name: 友情链接
   link_list:
     1:
-      name: MarxCBR-CNBLOG
-      link: https://www.cnblogs.com/marxcbr
-      avatar: https://profile.csdnimg.cn/1/2/7/1_cbr97
-      descr: 博客园MarxCBR
+      name: MoeDev的悄悄话
+      link: https://www.moedev.net/
+      avatar: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585486217323.png
+      descr: 为甚麽不来和MoeDev贴贴呢？
     2:
       name: MarxCBR
       link: https://blog.marxcbr.cn/
       avatar: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/avatar.png
       descr: MarxCBR的小屋
+    3:
+      name: 小丁的个人博客
+      link: https://tding.top
+      avatar: https://tding.top/images/avatar.webp
+      descr: 世间所有的相遇，都是久别重逢

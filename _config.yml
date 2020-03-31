@@ -4,8 +4,8 @@
 
 # Site
 title: MarxCBR的小屋
-subtitle: 'MarxCBR的小屋'
-description: 'MarxCBR的小屋'
+subtitle: MarxCBR的小屋
+description: MarxCBR的小屋
 keywords: MarxCBR
 author: MarxCBR
 language: zh-CN
@@ -14,7 +14,8 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.marxcbr.cn
+url: https://www.marxcbr.cn
+
 root: /
 # permalink: :year/:month/:day/:title/
 permalink: archives/:abbrlink.html
@@ -138,16 +139,36 @@ live2d:
       # hOffset: 30
       # vOffset: -20
   mobile:
-      show: false
+      show: true
       # scale: 0.05
   react:
       opacity: 0.9
     # opacityDefault: 1
     # opacityOnHover: 0.2
 
+
+baidu_url_submit:
+  count: 1000
+  host: www.marxcbr.cn ## 在百度站长平台中注册的域名
+  token: Ap77QKr8AM0tEODq ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+  ssl: true
+
+
+nofollow:
+  enable: true
+  exclude:
+    - www.moedev.net
+    - blog.marxcbr.cn
+    - tding.top
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: git@github.com:97CBR/97CBR.github.io.git
+- type: git
+  repository:
+  - git@github.com:97CBR/97CBR.github.io.git
+  - git@e.coding.net:MarxCBR/marxcbr/marxcbr.git
   branch: master
+
+- type: baidu_url_submitter
