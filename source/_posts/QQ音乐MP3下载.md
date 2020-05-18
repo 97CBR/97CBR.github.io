@@ -1,17 +1,18 @@
 ---
 title: QQ音乐MP3下载
 tags:
-   - Python
-   - 爬虫
-   - 工具
-abbrlink: 3aaed7d
-date: 2019-3-29 00:00:00
+  - Python
+  - 爬虫
+  - 工具
 categories: 爬虫
 keywords:
-    - Python
-    - 爬虫
+  - Python
+  - 爬虫
 description: 利用Python创建爬虫下载QQ音乐MP3文件
-cover: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-24/2020-3-24未命名文件/1585031420351.png
+cover: >-
+  https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-24/2020-3-24未命名文件/1585031420351.png
+abbrlink: 28d613bd
+date: 2019-03-29 00:00:00
 ---
 
 

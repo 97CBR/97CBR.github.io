@@ -4,7 +4,7 @@ tags:
   - 虚拟机
   - Linux
   - VMware Workstation
-categories: 爬虫
+categories: 虚拟机
 keywords:
   - VMware Workstation
   - 虚拟机安装

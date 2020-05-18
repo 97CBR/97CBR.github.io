@@ -1,5 +1,5 @@
 ---
-title: 利用 detours hook OpenProcess 实现指定进程保护
+title: 利用 Detours Hook OpenProcess 实现指定进程保护
 abbrlink: 1dd9aa1
 date: 2020-03-31 22:00:57
 tags:
@@ -10,13 +10,13 @@ keywords:
     - Hook
     - detours
     - 指定进程保护
-description: 利用 detours hook OpenProcess 实现指定进程保护
+description: 利用 Detours hook OpenProcess 实现指定进程保护
 cover: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-31/BogImages/1585666062216.png
 ---
 
 ## 前言
 
-为什么要去利用 detours 进行 hook OpenProcess 实现指定进程保护呢
+为什么要去利用 detours 进行 Hook OpenProcess 实现指定进程保护呢
 因为我的毕设是移动存储设备的安全监控
 所以，要求软件在电脑上运行的时候，不允许用户自由的关闭程序。得将自己保护起来，就像杀软一样，要先将自己保护好了，再去保护别人
 

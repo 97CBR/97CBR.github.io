@@ -139,8 +139,8 @@ live2d:
       # hOffset: 30
       # vOffset: -20
   mobile:
-      show: true
-      # scale: 0.05
+      show: false
+      scale: 0.5
   react:
       opacity: 0.9
     # opacityDefault: 1
@@ -161,6 +161,15 @@ nofollow:
     - www.moedev.net
     - blog.marxcbr.cn
     - tding.top
+
+markdown_it_plus:
+  plugins:
+    - plugin:
+      name: '@neilsustc/markdown-it-katex'
+      enable: true
+      options:
+        strict: false
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
