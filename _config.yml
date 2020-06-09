@@ -5,8 +5,8 @@
 # Site
 title: MarxCBR的小屋
 subtitle: MarxCBR的小屋
-description: MarxCBR的小屋
-keywords: MarxCBR
+description: MarxCBR的小屋，记录自己的点滴日常
+keywords: MarxCBR,后端开发，记录
 author: MarxCBR
 language: zh-CN
 # language: en
@@ -161,6 +161,7 @@ nofollow:
     - www.moedev.net
     - blog.marxcbr.cn
     - tding.top
+    - lookupman.cn
 
 markdown_it_plus:
   plugins:
