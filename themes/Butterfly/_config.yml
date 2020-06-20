@@ -9,6 +9,7 @@ menu:
   时间轴: /archives/ || fa fa-archive
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
+  # 草稿: /draft/ || fa fa-pencil-square-o
   友链: /link/ || fa fa-link
   关于: /about/ || fa fa-heart
   娱乐||fa fa-list:
@@ -123,7 +124,7 @@ avatar:
 index_img:
 
 # if the banner of page not setting,it will show the top_img
-default_top_img: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/top.jpg
+default_top_img: https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/index.webp
 
 # the banner image of archive page
 archive_img:
@@ -381,7 +382,7 @@ related_post:
 # 默認top_img全屏，site_info在中間
 # 使用默認, 都無需填寫（建議默認）
 index_site_info_top: # 主頁標題距離頂部距離  例如 300px/300em/300rem/10%
-index_top_img_height: # 主頁top_img高度 例如 300px/300em/300rem  不能使用百分比
+index_top_img_height: 720px # 主頁top_img高度 例如 300px/300em/300rem  不能使用百分比
 
 # category和tag頁的UI設置
 # index 值代表 UI將與首頁的UI一樣
