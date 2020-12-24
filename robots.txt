@@ -1,0 +1,18 @@
+# welcome to : www.marxcbr.cn
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /link/
+Allow: /music/
+Allow: /movies/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /lib/
+
+Sitemap: https://blog.marxcbr.cn/sitemap.xml
+Sitemap: https://blog.marxcbr.cn/baidusitemap.xml
