@@ -1,6 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Visual Studio 远程调试软件</title>
+    <url>/archives/bd777f4a.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>今天搞一篇VS相关的内容，为啥要用到远程部署调试，这个也是有缘由的。要不，闲着蛋疼用它作甚，本地调试它不香？</p>
+<p>主要是<a href="https://www.marxcbr.cn/archives/109d9c59.html">上一篇文章</a>说到的那个项目，U盘文件加密软件的项目。为了测试一些功能，得疯狂拔插它，看他正不正常，看它稳定不稳定。那拔插就拔插啊，关远程啥事。其实也没啥影响，就是，有点麻烦，测一次就得将双手从键盘上挪走，去拔插那已经被插到松动的扩展坞，有时还不会识别，气不气嗦。</p>
+<p>所以，今天还真的用远程调试来比较舒服些，那我远程部署到哪里调试呢，那当然是部署到虚拟机里面呀。那缘何要放虚拟机里面，前面说了，因为我懒。。。</p>
+<p>哈哈哈，主要是虚拟机有硬件连接的功能啦，就是VM右下角那个东西，它给我提供了懒的基础。</p>
+<p><img src="/" alt="20210121202604" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C20629640b6582adbceaccd3871d7e209.png"></p>
+<p>这显示倆，是因为我怼了俩U盘，一个接到主机一个接到虚拟机，点它就可以选择对应的U盘是否接入虚拟机</p>
+<h2 id="部署环境"><a class="markdownIt-Anchor" href="#部署环境"></a> 部署环境</h2>
+<h3 id="接入测试用u盘"><a class="markdownIt-Anchor" href="#接入测试用u盘"></a> 接入测试用U盘</h3>
+<p>插到主机USB口之后，会让你选接入到的设备，我这里全部接到主机</p>
+<p><img src="/" alt="20210121201858" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C5697c5b94161cef5adf8273dd294fb0b.png"></p>
+<h3 id="部署远程调试软件到虚拟机中"><a class="markdownIt-Anchor" href="#部署远程调试软件到虚拟机中"></a> 部署远程调试软件到虚拟机中</h3>
+<p>扯犊子这么久，正文开始。</p>
+<p>将 <strong>msvsmon.exe</strong> 所在的目录整个拖过去，这个工具只要是安装了VS的，都会有，例如我的 msvsmon.exe 路径为 E:\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Remote Debugger\x64 ，因为我主机、虚拟机以及部署调试的软件均为64位，所以选择64位的程序</p>
+<p>拖过去之后，右键管理员运行之，会让你授权管理员，以方便配置防火墙等服务，如果不以管理员运行，到时走到最后一步部署的时候，会有下图说需要管理员运行</p>
+<p><img src="/" alt="20210121204536" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Cdfed84058b929bbf2bbd630761bad539.png"></p>
+<p><img src="/" alt="20210121203308" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Cbaef079ff6ca7aba4d33b5ca3e83ba66.png"></p>
+<p>哟西，授权后，启动起来了</p>
+<p><img src="/" alt="20210121203407" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C458ac8da9cbf1ec411ec794402820016.png"></p>
+<p>打开选项，进行配置，选 <strong>无身份验证</strong> 然后，最长空闲时间<strong>设为0</strong>，因为我记得设为0是无限等待。</p>
+<p><img src="/" alt="20210121203608" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C60363f1bbfee0b3c73270128c080ca89.png"></p>
+<p>差不多了，虚拟机这边就这样了。</p>
+<h3 id="配置主机端的开发项目"><a class="markdownIt-Anchor" href="#配置主机端的开发项目"></a> 配置主机端的开发项目</h3>
+<p>来到项目配置，选择 调试 然后，切换到 远程 Windows 调试器</p>
+<p>然后，<strong>设置好运行命令，工作目录，远程服务器的名字，环境，以及部署的目录，还有其他要部署的文件</strong></p>
+<p><img src="/" alt="20210121205146" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Ca93e8480a4835481ffddc90ab4fa20ae.png"></p>
+<p>在这里，记一下这几个点</p>
+<blockquote>
+<ul>
+<li>
+<p>这个其它要部署的文件，可以自动将依赖复制过去，比如我这里写的 cryptopp.dll 这个，如果不自动复制过去的话，手动复制的话，有多蛋疼，懂得都懂</p>
+</li>
+<li>
+<p>远程服务器名称，可以用 whoami 看</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="/" alt="20210121205711" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C4147c962a2f1cfd573c296316d13ee0d.png"></p>
+<blockquote>
+<ul>
+<li>部署目录如果不写，会无法自动部署，如下，灰格子<br />
+<img src="/" alt="20210121205846" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C1bd04a2646632c1cc9fcbb744dfe24ac.png"></li>
+</ul>
+</blockquote>
+<p>配置完毕后，选择好要用的调试器</p>
+<p><img src="/" alt="20210121210628" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C783dba67fcead5c2f6ade0398ff494bb.png"></p>
+<p>点击调试，启动，芜湖，起飞</p>
+<p><img src="/" alt="20210121210726" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C3955be342d68de0da19984b11ea54c66.png"></p>
+<p>往虚拟机一看，芜湖，坠机</p>
+<p><img src="/" alt="20210121210806" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C36313f3058f36377bc64d223193d38e7.png"></p>
+<p>好嘛，忘了将QT的dll弄过去了。</p>
+<blockquote>
+<p>这里有点儿小坑，似乎是没法将本地机器的目录在配置里面直接拷到远程机器的，为了弄清能不能直接部署目录下的文件过去，特地查了一些官网说明 <a href="https://docs.microsoft.com/zh-cn/visualstudio/debugger/remote-debugging-cpp?view=vs-2019">https://docs.microsoft.com/zh-cn/visualstudio/debugger/remote-debugging-cpp?view=vs-2019</a></p>
+</blockquote>
+<p><img src="/" alt="20210121211118" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Ce867a4c9852add47cc37a9ad289d4ecf.png"></p>
+<p>所以，远程机器并未安装有QT的环境，所以，是不行的。那只能指定要复制哪些dll过去了，或者手动将需要的dll复制过去</p>
+<p>那我又不知道缺失什么dll，一个一个点确定，再一个一个复制过去，那不显得很憨？</p>
+<p>所以，就用QT的部署工具，将依赖dll全部给整出来，然后再全部复制到远程机器上</p>
+<p>Windows键之后，找到QT的命令行，然后输入一下命令，当然你得换换路径啦</p>
+<p><img src="/" alt="20210121211751" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C284d365d9c9c79bd8fe20f896f1c597f.png"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> E:\Code\UdiskEncryptTools\UdiskEncryptTools\x64\Debug &amp;&amp; windeployqt UdiskEncryptTools.exe</span><br></pre></td></tr></table></figure>
+<p><img src="/" alt="20210121211940" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C1bbe0f12817a0cae1f7d7e8b06110743.png"></p>
+<p>自动打包后，依赖的dll就全部都在这里了，来看看目录</p>
+<p><img src="/" alt="20210121212033" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Cf4af783e032275ae90f3fe577f79fa76.png"></p>
+<p>没毛病，将这些文件全部都复制到远程机器上</p>
+<p>再来远程调试一次</p>
+<p><img src="/" alt="20210121212430" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Cf9c360223e23fc6885dd3eaa60c8a63f.png"></p>
+<p>好家伙，还缺一个dll，ucrtbased.dll，这家伙在C:\Windows\System32 目录下，手动复制一下到虚拟机上</p>
+<p>再来一次，肯定可以了</p>
+<p><img src="/" alt="20210121213149" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Cb5279a1d12f84733555c2c8eb3cee18e.png"></p>
+<p><strong>芜湖，起飞！</strong></p>
+<h2 id="断点调试"><a class="markdownIt-Anchor" href="#断点调试"></a> 断点调试</h2>
+<p>在 处理插入U盘处下断，看看是否正常命中</p>
+<p><img src="/" alt="20210121213327" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C0259856f083dcc6026219dcf6584fc1d.png"></p>
+<p><img src="/" alt="20210121202534" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Ca845f1c1fa118676e8cc32fc7e7ab262.png"></p>
+<p>这里要用到前面说的，将U盘从主机接到虚拟机</p>
+<p>然后可以看到命中断点，以及调试信息什么的，都是正常的，岂一个美滋滋了得 ~</p>
+<p><img src="/" alt="20210121213535" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5Cc1a4fc829b01dbc5494cffd57228e3fc.png"></p>
+<p><img src="/" alt="20210121213612" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C8017c656ba98e41a3797d0b4c0f1fe26.png"></p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<p>折腾这么久（其实写文章花了不少时间），就为了节省拔插U盘的时间，顺便复习一波VS远程部署调试的小技能。哈哈哈，阔以了，快乐了，调试去~</p>
+<p><img src="/" alt="20210121201216" / class="lazyload" data-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog%5C6597a437dde934717c9610a47c6c0d3b.png"></p>
+<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+      <categories>
+        <category>C++</category>
+        <category>Visual Studio</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>Visual Studio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决 C++ 在调用 Cryptopp EAX 加密模式时无法进行MDD动态编译问题</title>
     <url>/archives/109d9c59.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -877,8 +972,8 @@ Cppcheck是GNU通用公共许可证下的免费软件 。</p>
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>调试</tag>
         <tag>Visual Studio</tag>
+        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -1239,9 +1334,9 @@ public DbSet<Marx> marxes { get; set; }<br />
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>Visual Studio</tag>
         <tag>MVC</tag>
         <tag>.Net</tag>
+        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -3693,8 +3788,8 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
       </categories>
       <tags>
         <tag>Android</tag>
-        <tag>信息安全</tag>
         <tag>逆向</tag>
+        <tag>信息安全</tag>
       </tags>
   </entry>
   <entry>
