@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>自己写一个映射网络驱动器工具 | MarxCBR的小屋</title><meta name="keywords" content="QT,工具,信号与槽函数"><meta name="author" content="MarxCBR"><meta name="copyright" content="MarxCBR"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="利用C++和QT在VS2017里面自己写一个映射网络驱动器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自己写一个映射网络驱动器工具">
+<meta property="og:url" content="https://www.marxcbr.cn/archives/dc4eed07.html">
+<meta property="og:site_name" content="MarxCBR的小屋">
+<meta property="og:description" content="利用C++和QT在VS2017里面自己写一个映射网络驱动器">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png">
+<meta property="article:published_time" content="2019-06-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-23T13:48:32.324Z">
+<meta property="article:author" content="MarxCBR">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="QT">
+<meta property="article:tag" content="信号与槽函数">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.marxcbr.cn/archives/dc4eed07"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//pingjs.qq.com"><link rel="preconnect" href="//fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-5274001498594547',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5e6c16262ff982855cfe514c1c0ca346";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-161658862-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-161658862-1');
+</script><script>var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "66536458");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '自己写一个映射网络驱动器工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-23 21:48:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="MarxCBR的小屋" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">60</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">64</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fa fa-camera"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MarxCBR的小屋</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fa fa-camera"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">自己写一个映射网络驱动器工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-06-13T16:00:00.000Z" title="发表于 2019-06-14 00:00:00">2019-06-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-23T13:48:32.324Z" title="更新于 2020-12-23 21:48:32">2020-12-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/QT%E5%BC%80%E5%8F%91/">QT开发</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id data-flag-title="自己写一个映射网络驱动器工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="我们不如自己写一个映射网络驱动器工具吧"><a class="markdownIt-Anchor" href="#我们不如自己写一个映射网络驱动器工具吧"></a> 我们不如自己写一个映射网络驱动器工具吧</h2>
+<p>还记得上篇说到的VS创建QT工程并添加到GitHub中吗？<br>
+我们当时创建了一个项目，叫NetDrive，是本人闲着打算写的一个小工具，打算做一个网络驱动器的映射的工具<br>
+这小东西开源在GitHub中，大家可以在GitHub中fork下来一起玩，参加到这个小项目中，欢迎提交PR哦。<br>
+那废话不多说了，我们打开项目</p>
+<h2 id="设计界面"><a class="markdownIt-Anchor" href="#设计界面"></a> 设计界面</h2>
+<p>先双击ui文件，进入设计界面</p>
+<p>从左边拖一些基本的组件进来<br>
+把功能和大概要展示出来的关键内容给摆好</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560077940746.png" alt></p>
+<h2 id="创建连接信号槽"><a class="markdownIt-Anchor" href="#创建连接信号槽"></a> 创建连接信号槽</h2>
+<p>emmm，大概设计好这个界面之后<br>
+我们就可以将槽函数、按钮什么的，绑定好<br>
+在我们的设计器里，点击信号设置</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485004757.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485099976.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485159060.png" alt></p>
+<p>按回车没用的，要点那个 + 号</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485184325.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485319447.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485328853.png" alt></p>
+<p>看到这个按钮绑定到这个函数，就可以了<br>
+我们准备写功能去，记得先Ctrl + S 保存好哟</p>
+<h2 id="准备功能函数开发"><a class="markdownIt-Anchor" href="#准备功能函数开发"></a> 准备功能函数开发</h2>
+<p>参考了巨硬的这个官方说明样例：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.microsoft.com/zh-cn/windows/desktop/WNet/assigning-a-drive-to-a-share">https://docs.microsoft.com/zh-cn/windows/desktop/WNet/assigning-a-drive-to-a-share</a></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560490720654.png" alt></p>
+<p>他们都提供好一个Demo了，这就十分快乐了，代码看起来简单易懂<br>
+就施展CV大法了</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485859827.png" alt></p>
+<p>这个时候，他就报错了。<br>
+说，无法从“const char [6]”转换为“TCHAR [32]”</p>
+<p>所以，我们就看看TCHAR是什么类型<br>
+在TCHAR那里，F12，跟进一下到它声明的地方</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560486672597.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485944356.png" alt><br>
+看到TCHAR就是WCHAR<br>
+再跟一下，看到WCHAR就是wchar_t<br>
+是16-bit 的 Unicode的字符，16-bit就是两个字节嘛<br>
+所以，在官方demo中，解决这个 const char 无法转到TCHAR的办法就是 加个 L</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560485888110.png" alt></p>
+<p>在字符串前加一个L作用: unicode字符集是两个字节组成的。L告示编译器使用两个字节的 unicode 字符集。</p>
+<p>在这里，我随意，打印一个样例出来，加L和不加L的一个字符串所占空间给大家看看<br>
+至于为啥MARXCBR七个字符占了8个空间，是因为字符串会自动加一个“/0”<br>
+结合上面说的和图里面的数据，相信大家能从中一眼看出差异所在</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560486316765.png" alt></p>
+<h2 id="踩的坑一"><a class="markdownIt-Anchor" href="#踩的坑一"></a> 踩的坑：一</h2>
+<p>OK，咱们解决了官方demo在本地不适用的情况之后<br>
+我们直接运行一下</p>
+<p>将我之前搞的那个NAS的账号密码还有本地盘符以及映射路径填好之后</p>
+<p>在res那个地方，断个点，看一下，有没能映射回来</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560488989054.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560489016065.png" alt></p>
+<p>嗯，看起来是映射成功了</p>
+<p>我们回到资源管理器里面看看</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560489158720.png" alt></p>
+<p>但是，没找到我映射回来的B盘<br>
+不对呀，刚才都说连接成功，映射成功了</p>
+<p>然后，这就是我踩坑的地方了，嘻嘻嘻。我那时候，找来找去都没到为啥，又跑去说明文档里面去看。<br>
+但是都没说到，为啥资源管理器没有显示我的网络驱动器</p>
+<p>直到，本人在VS中关掉项目，打算重新打开时，才发现<br>
+映射的盘符显示在里面了。。。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560489383421.png" alt></p>
+<p>然后才醒悟，我的VS是用管理员权限去运行的</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560489416608.png" alt></p>
+<p>所以，写好跑出来的程序，也是用管理员去执行的。那么映射回来盘，就只能有管理员权限才能看到啦。</p>
+<p>跑去CMD里面，确认一下，的确是管理员才能看到。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560489517411.png" alt></p>
+<p>所以，用普通用户权限去执行一下这个程序</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560489682336.png" alt></p>
+<p>资源管理器里面就出来了</p>
+<p>那么，官方的demo坑就踩完了</p>
+<h2 id="创建函数与前面设计的信号关联"><a class="markdownIt-Anchor" href="#创建函数与前面设计的信号关联"></a> 创建函数与前面设计的信号关联</h2>
+<p>接着，我们要建立一个函数，名字与刚才在设计器里面绑定的函数一样<br>
+在点击 “连接” 按钮后，就会自动连接好我们所填参数的网络驱动器</p>
+<p>在头文件里面，加入 slots：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> slots:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">connectDrive</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560491208390.png" alt></p>
+<p>在cpp里面，写逻辑代码<br>
+在这里，我们需要获取用户填入的用户名、密码、他所期待的驱动器号，还有远程映射的路径</p>
+<p>但是，这里有个需要提醒的：设计不规格，编码泪两行</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560491336147.png" alt></p>
+<p>如上图所示，如果在designer 里面，没将控件对应的对象名定义好的话<br>
+在写代码的时候，你就会连自己也不知道这一堆不明意义的控件默认名称到底哪个是哪个<br>
+所以，我们在设计的时候，就要将控件的对象名给确定好</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560491634436.png" alt><br>
+然后，输入对象的名字，回车！<br>
+还要记得保存，Ctrl S 一下，否则是不会保存更改的。</p>
+<p>我们回到VS里面，重新生成一下<br>
+这个时候，再用ui.去找对象，就好找多了</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560492031575.png" alt></p>
+<h2 id="编写网络驱动器映射函数"><a class="markdownIt-Anchor" href="#编写网络驱动器映射函数"></a> 编写网络驱动器映射函数</h2>
+<p>然后，将刚才的demo，抽出来，搞成一个函数<br>
+将需要的参数传过去就好了</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560492383688.png" alt></p>
+<p>然后，在QString转TCHAR的时候，果不其然，还是要出幺蛾子</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560492521970.png" alt></p>
+<p>应使用{…} 来初始化聚合对象<br>
+所以，我们给他加了一个{}</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560492575294.png" alt></p>
+<p>然后在网上参考了一下：QString到TCHAR<br>
+尝试了几个方案，都不行，最后在某一篇博文中，找到了一段类型转换的宏定义</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> UNICODE</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> QStringToTCHAR(x)     (wchar_t*) x.utf16()</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PQStringToTCHAR(x)    (wchar_t*) x-&gt;utf16()</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TCHARToQString(x)     QString::fromUtf16((x))</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TCHARToQStringN(x,y)  QString::fromUtf16((x),(y))</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> QStringToTCHAR(x)     x.local8Bit().constData()</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PQStringToTCHAR(x)    x-&gt;local8Bit().constData()</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TCHARToQString(x)     QString::fromLocal8Bit((x))</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TCHARToQStringN(x,y)  QString::fromLocal8Bit((x),(y))</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//来源：https://blog.csdn.net/w_sx12553/article/details/8514839</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>QString不能直接转换到TCHAR<br>
+好记得上面说的TCHAR是16-bit是字符嘛<br>
+恰好QString能直接转成这个 .utf16() 一下</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560492734449.png" alt></p>
+<p>我们可以看到const ushort * 不能转TCHAR<br>
+因为TCAHR 是wchar_t<br>
+而wchar_t  是 unsigned short<br>
+所以，在这里，将UserName[32] 改成 *UserName</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560493007520.png" alt></p>
+<p>提出，ushort * 不能转TCHAR *<br>
+所以，直接使用 (wchar_t*)对userName.utf16()进行类型转换</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560493072521.png" alt></p>
+<p>到这里就可以完成参数类型转换并传递了</p>
+<p>尝试运行一下下</p>
+<p>嗯，刚才输进去的网络驱动器被成功映射回来了</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-14/%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8/1560493647098.png" alt></p>
+<p>在这里再顺手提一下WNetAddConnection2这个函数<br>
+整个磁盘映射函数中核心用到的函数，其实就这个~~~<br>
+上面的类型转换也是为了满足他对参数的要求</p>
+<p>这是他的定义</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">DWORD <span class="title">WNetAddConnection2A</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">  LPNETRESOURCEA lpNetResource,</span></span></span><br><span class="line"><span class="function"><span class="params">  LPCSTR         lpPassword,</span></span></span><br><span class="line"><span class="function"><span class="params">  LPCSTR         lpUserName,</span></span></span><br><span class="line"><span class="function"><span class="params">  DWORD          dwFlags</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>巨硬的说明文档连接在此：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.microsoft.com/en-us/windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection2a">https://docs.microsoft.com/en-us/windows/desktop/api/winnetwk/nf-winnetwk-wnetaddconnection2a</a><br>
+详细的参数以及返回码对应的意义，可以在里面找到详细的参考说明</p>
+<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noopener noreferrer" target="_blank">MarxCBR</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.marxcbr.cn/archives/dc4eed07.html">https://www.marxcbr.cn/archives/dc4eed07.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener noreferrer">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.marxcbr.cn" target="_blank">MarxCBR的小屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><a class="post-meta__tags" href="/tags/QT/">QT</a><a class="post-meta__tags" href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD%E5%87%BD%E6%95%B0/">信号与槽函数</a></div><div class="post_share"><div class="social-share" data-image="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/"></a><div class="post-qr-code-desc"></div></li><li class="reward-item"><a href="/" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/"></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/479bb35e.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153085793.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">用QSS给QT默认的控件穿件衣服</div></div></a></div><div class="next-post pull-right"><a href="/archives/687d52f8.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Visual Studio 创建QT工程并添加到GitHub中</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/archives/fd5228cc.html" title="NAS邮件服务器"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585214641951.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-21</div><div class="title">NAS邮件服务器</div></div></a></div><div><a href="/archives/28d613bd.html" title="QQ音乐MP3下载"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-24/2020-3-24未命名文件/1585031420351.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-03-29</div><div class="title">QQ音乐MP3下载</div></div></a></div><div><a href="/archives/153fb74d.html" title="Python自动下载Wallhaven复联4壁纸"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-27/wallhaven下载复联4壁纸/1556333485160.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-04-27</div><div class="title">Python自动下载Wallhaven复联4壁纸</div></div></a></div><div><a href="/archives/6b9be86d.html" title="PYQT界面之按钮绑定使用"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153085793.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-07</div><div class="title">PYQT界面之按钮绑定使用</div></div></a></div><div><a href="/archives/58696240.html" title="Visual Studio 2017搭建QT5开发环境"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153085793.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-30</div><div class="title">Visual Studio 2017搭建QT5开发环境</div></div></a></div><div><a href="/archives/687d52f8.html" title="Visual Studio 创建QT工程并添加到GitHub中"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-09</div><div class="title">Visual Studio 创建QT工程并添加到GitHub中</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E4%B8%8D%E5%A6%82%E8%87%AA%E5%B7%B1%E5%86%99%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E5%B7%A5%E5%85%B7%E5%90%A7"><span class="toc-number">1.</span> <span class="toc-text"> 我们不如自己写一个映射网络驱动器工具吧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%95%8C%E9%9D%A2"><span class="toc-number">2.</span> <span class="toc-text"> 设计界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5%E4%BF%A1%E5%8F%B7%E6%A7%BD"><span class="toc-number">3.</span> <span class="toc-text"> 创建连接信号槽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0%E5%BC%80%E5%8F%91"><span class="toc-number">4.</span> <span class="toc-text"> 准备功能函数开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B8%A9%E7%9A%84%E5%9D%91%E4%B8%80"><span class="toc-number">5.</span> <span class="toc-text"> 踩的坑：一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0%E4%B8%8E%E5%89%8D%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%BF%A1%E5%8F%B7%E5%85%B3%E8%81%94"><span class="toc-number">6.</span> <span class="toc-text"> 创建函数与前面设计的信号关联</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E6%98%A0%E5%B0%84%E5%87%BD%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text"> 编写网络驱动器映射函数</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By MarxCBR</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">2</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div></div><hr><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right"},"mobile":{"show":false,"scale":0.5},"react":{"opacity":0.9},"log":false});</script></body></html>

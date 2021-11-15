@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PYQT5开发环境搭建 | MarxCBR的小屋</title><meta name="keywords" content="QT,界面开发"><meta name="author" content="MarxCBR"><meta name="copyright" content="MarxCBR"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="PYQT5开发环境搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PYQT5开发环境搭建">
+<meta property="og:url" content="https://www.marxcbr.cn/archives/82219c25.html">
+<meta property="og:site_name" content="MarxCBR的小屋">
+<meta property="og:description" content="PYQT5开发环境搭建">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-5-19/BogImages/1589856479947.png">
+<meta property="article:published_time" content="2019-04-26T03:57:00.000Z">
+<meta property="article:modified_time" content="2020-12-23T13:48:32.325Z">
+<meta property="article:author" content="MarxCBR">
+<meta property="article:tag" content="QT">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="界面开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-5-19/BogImages/1589856479947.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://www.marxcbr.cn/archives/82219c25"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="preconnect" href="//hm.baidu.com"><link rel="preconnect" href="//pingjs.qq.com"><link rel="preconnect" href="//fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-5274001498594547',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5e6c16262ff982855cfe514c1c0ca346";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-161658862-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-161658862-1');
+</script><script>var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "66536458");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PYQT5开发环境搭建',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-23 21:48:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="MarxCBR的小屋" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">60</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">64</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fa fa-camera"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-5-19/BogImages/1589856479947.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">MarxCBR的小屋</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/photo/"><i class="fa-fw fa fa-camera"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E9%9F%B3%E4%B9%90"><i class="fa-fw /music/"></i><span> 0</span></a></li><li><a class="site-page child" href="/%E7%94%B5%E5%BD%B1"><i class="fa-fw /movies/"></i><span> 1</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PYQT5开发环境搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-04-26T03:57:00.000Z" title="发表于 2019-04-26 11:57:00">2019-04-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-23T13:48:32.325Z" title="更新于 2020-12-23 21:48:32">2020-12-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/QT%E5%BC%80%E5%8F%91/">QT开发</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id data-flag-title="PYQT5开发环境搭建"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>今天看看如何搭建基于Python的PyQt5开发环境的搭建。</p>
+<p>俗话有说：砌墙先打基，吃蛋先养鸡。我们要用Python做界面开发的话，就得把开发环境给搭建好才可以进行。下面，请跟着我的步伐，将你的开发环境搞起来，可好？（搞的像真的一样。。。）</p>
+<h2 id="步骤一览"><a class="markdownIt-Anchor" href="#步骤一览"></a> 步骤一览</h2>
+<ul>
+<li>第一步，把Python安装上</li>
+<li>第二步，把IDE安装上</li>
+<li>第三步，把依赖包安装上</li>
+<li>第四步，添加外部设计工具</li>
+<li>第五步，设置ui转py文件工具</li>
+<li>第六步，设置资源转py文件工具</li>
+<li>第七步，引用自动生成的界面代码，运行</li>
+</ul>
+<p>呐，不多不少，就简简单单的7步，就可以将PYQT的开发环境给搭建好了。</p>
+<h2 id="安装好python"><a class="markdownIt-Anchor" href="#安装好python"></a> 安装好Python</h2>
+<p>第一步：装python ，到Python的官网去下载即可。本人推荐Python36。<br>
+链接在此：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556266494994.png" alt></p>
+<h2 id="pycharm是真滴香"><a class="markdownIt-Anchor" href="#pycharm是真滴香"></a> Pycharm是真滴香</h2>
+<p>第二步：IDE在这里我推荐用 Pycharm  这个IDE简直就是Python开发的大宝剑好吧，用它可以将你的开发速度蹭蹭蹭地往上提，而且调试以及性能查看的功能会让你欲罢不能，逐渐上瘾的哦。<br>
+链接在此：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556266660366.png" alt></p>
+<p>专业版需要激活码、或者激活服务器。不过大家可以自行百度找到，很多很多。社区版则不用激活码，但是功能会稍有不同，注意是稍有，就是基本不会影响到你的体验。</p>
+<blockquote>
+<p>有条件的同学，请支持正版，可以用学校邮箱去申请专业版，也可以去开源的GitHub项目申请，方法多多的。。。</p>
+</blockquote>
+<h2 id="安装python依赖"><a class="markdownIt-Anchor" href="#安装python依赖"></a> 安装Python依赖</h2>
+<p>第三步：就是安装依赖包了<br>
+这个时候，我默认大家已经将 Pycharm 装好了，而且也可以运行Hello World 了。<br>
+在pycharm中安装库的步骤如下：<br>
+File -&gt; Settings -&gt; project interpreter -&gt; + 号</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556267003527.png" alt></p>
+<p>我们做PYQT5的环境搭建，需要安装这几个包：</p>
+<ul>
+<li>PyQt5-sip</li>
+<li>PyQt5</li>
+<li>PyInstaller<br>
+这几个包稍微有点大，请按照的时候保持耐心，或者使用国内镜像加速。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556267249219.png" alt></p>
+<h2 id="设置qt工具"><a class="markdownIt-Anchor" href="#设置qt工具"></a> 设置QT工具</h2>
+<p>第四步：添加外部设计工具<br>
+重点来了，敲黑板，哈哈哈<br>
+到这步的时候，我也默认你已经将上面那几个包给正确安装好了哈。<br>
+这个时候，我们在pycharm中添加外部设置工具。<br>
+步骤如下：<br>
+File -&gt; Settings -&gt; Tools -&gt; External Tools -&gt; + 号</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556267503467.png" alt></p>
+<p>在这里我们点击 + 后，会弹出一个配置页面。设置好对应的工具名字，可以起的狂拽酷炫一点点。接着点击program那个选项的文件夹，去找到我们的designer.exe工具。这个工具一般在Python安装目录里面的那个Script目录里。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556267907261.png" alt></p>
+<p>然后在working directory 里面填 $FileDir$，也可以点insert macros 去找到</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268075145.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556267778683.png" alt></p>
+<h2 id="设置ui文件转py的工具"><a class="markdownIt-Anchor" href="#设置ui文件转py的工具"></a> 设置ui文件转py的工具</h2>
+<p>第五步：设置ui转py文件工具<br>
+到这步就要设置转换工具了，步骤如上，不过在 program 和 arguments 里面要改一下。<br>
+分别填入一下内容：<br>
+program ：自己Python的位置，如E:\Python36\python36.exe<br>
+arguments：-m PyQt5.uic.pyuic  $FileName$ -o $<a target="_blank" rel="external nofollow noopener noreferrer" href="http://FileNameWithoutExtension$.py">FileNameWithoutExtension$.py</a></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268320573.png" alt></p>
+<h2 id="设置资源qrc文件转py的工具"><a class="markdownIt-Anchor" href="#设置资源qrc文件转py的工具"></a> 设置资源qrc文件转py的工具</h2>
+<p>第六步，设置资源转py文件工具<br>
+这个和前面一样，要改一点东西而已，也是改改 program 和 arguments的参数就可以了。<br>
+program ：自己pyrcc5.exe的位置，如E:\Python36\Scripts\pyrcc5.exe<br>
+arguments：$FileName$ -o $FileNameWithoutExtension$_rc.py</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268397588.png" alt></p>
+<p>这个时候，其实算是搭建好开发环境了。那为啥我还要给加上这第七步呢？在网上，有很多人的配置中，其实都没有第六步，我这里是加进去，更加完善内容的。为后面开发做好铺垫。</p>
+<p>OK，现在我们打开设计工具，tools 》外部工具》刚才自己设置的名字</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268586131.png" alt></p>
+<p>打开后，界面就是这样子啦，点击Create，即可生成一个新的ui文件。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268665318.png" alt><br>
+拖动控件，修改控件的内容，然后 Ctrl + S 保存</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268805564.png" alt></p>
+<p>记得改名，方便自己使用。</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556268969100.png" alt></p>
+<p>回到pycharm里面，点击生成的ui文件，右键一下，如下</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556269086713.png" alt></p>
+<p>他就会自动生成你ui文件对应的py文件了<br>
+但是，这个时候他是使用不了了，运行的时候，什么都没显示</p>
+<p>当你有qrc文件使用到了资源文件时，使用刚才的配置rcc的那个来编译即可，我这里是叫PyQSS，这名字有点蠢<sub>，没事见惯不怪</sub></p>
+<h2 id="引用自动生成的界面代码运行代码"><a class="markdownIt-Anchor" href="#引用自动生成的界面代码运行代码"></a> 引用自动生成的界面代码，运行代码</h2>
+<p>到第七步了，我们需要再新建一个文件，去引用我们生成的py界面文件</p>
+<p>新建一个类，MainWindow 继承自Ui_MainWindow<br>
+然后在 _<em>init</em>_ 中去调用父类的MainWindow<br>
+接着就 self.setupUi(self)</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556269749447.png" alt></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-26/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E4%B9%8BPYQT5%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1556269582079.png" alt></p>
+<p>这样子，你的第一个 Hello World 界面程序便跑出来啦，美滋滋</p>
+<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noopener noreferrer" target="_blank">MarxCBR</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.marxcbr.cn/archives/82219c25.html">https://www.marxcbr.cn/archives/82219c25.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener noreferrer">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.marxcbr.cn" target="_blank">MarxCBR的小屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/QT/">QT</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/">界面开发</a></div><div class="post_share"><div class="social-share" data-image="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-5-19/BogImages/1589856479947.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/"></a><div class="post-qr-code-desc"></div></li><li class="reward-item"><a href="/" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/"></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/archives/153fb74d.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-27/wallhaven下载复联4壁纸/1556333485160.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Python自动下载Wallhaven复联4壁纸</div></div></a></div><div class="next-post pull-right"><a href="/archives/706b138e.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-5-19/如何让电脑使用手机的摄像头/1589859892179.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">电脑调用手机摄像头实现1080P分辨率拍摄</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/archives/6b9be86d.html" title="PYQT界面之按钮绑定使用"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153085793.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-07</div><div class="title">PYQT界面之按钮绑定使用</div></div></a></div><div><a href="/archives/58696240.html" title="Visual Studio 2017搭建QT5开发环境"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153085793.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-05-30</div><div class="title">Visual Studio 2017搭建QT5开发环境</div></div></a></div><div><a href="/archives/687d52f8.html" title="Visual Studio 创建QT工程并添加到GitHub中"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-09</div><div class="title">Visual Studio 创建QT工程并添加到GitHub中</div></div></a></div><div><a href="/archives/a9897d1a.html" title="可视化Tracert路由追踪工具"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/trace.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-18</div><div class="title">可视化Tracert路由追踪工具</div></div></a></div><div><a href="/archives/dc4eed07.html" title="自己写一个映射网络驱动器工具"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153493300.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-14</div><div class="title">自己写一个映射网络驱动器工具</div></div></a></div><div><a href="/archives/479bb35e.html" title="用QSS给QT默认的控件穿件衣服"><img class="cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-26/BogImages/1585153085793.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-06-18</div><div class="title">用QSS给QT默认的控件穿件衣服</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%E8%A7%88"><span class="toc-number">2.</span> <span class="toc-text"> 步骤一览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%A5%BDpython"><span class="toc-number">3.</span> <span class="toc-text"> 安装好Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pycharm%E6%98%AF%E7%9C%9F%E6%BB%B4%E9%A6%99"><span class="toc-number">4.</span> <span class="toc-text"> Pycharm是真滴香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85python%E4%BE%9D%E8%B5%96"><span class="toc-number">5.</span> <span class="toc-text"> 安装Python依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEqt%E5%B7%A5%E5%85%B7"><span class="toc-number">6.</span> <span class="toc-text"> 设置QT工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AEui%E6%96%87%E4%BB%B6%E8%BD%ACpy%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="toc-number">7.</span> <span class="toc-text"> 设置ui文件转py的工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%B5%84%E6%BA%90qrc%E6%96%87%E4%BB%B6%E8%BD%ACpy%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="toc-number">8.</span> <span class="toc-text"> 设置资源qrc文件转py的工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9A%84%E7%95%8C%E9%9D%A2%E4%BB%A3%E7%A0%81%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text"> 引用自动生成的界面代码，运行代码</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By MarxCBR</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">2</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div></div><hr><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right"},"mobile":{"show":false,"scale":0.5},"react":{"opacity":0.9},"log":false});</script></body></html>
