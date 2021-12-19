@@ -1112,8 +1112,8 @@ Cppcheck是GNU通用公共许可证下的免费软件 。</p>
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>Visual Studio</tag>
         <tag>调试</tag>
+        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -1474,9 +1474,9 @@ public DbSet<Marx> marxes { get; set; }<br />
         <category>Visual Studio</category>
       </categories>
       <tags>
+        <tag>Visual Studio</tag>
         <tag>MVC</tag>
         <tag>.Net</tag>
-        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -3266,8 +3266,8 @@ emmm，拍出来的照片，还真有点复古的感觉耶</p>
         <category>Android</category>
       </categories>
       <tags>
-        <tag>ADB</tag>
         <tag>Android</tag>
+        <tag>ADB</tag>
         <tag>有趣的东西</tag>
       </tags>
   </entry>
@@ -3335,8 +3335,8 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
         <category>Android</category>
       </categories>
       <tags>
-        <tag>ADB</tag>
         <tag>Android</tag>
+        <tag>ADB</tag>
         <tag>有趣的东西</tag>
       </tags>
   </entry>
