@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.marxcbr.cn/"/>
-  <updated>2021-11-15T16:52:51.135Z</updated>
+  <updated>2021-12-19T14:40:41.883Z</updated>
   <id>https://www.marxcbr.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重启家用光猫路由一体化路由器</title>
+    <link href="https://www.marxcbr.cn/archives/a082046b.html"/>
+    <id>https://www.marxcbr.cn/archives/a082046b.html</id>
+    <published>2021-12-19T14:30:00.000Z</published>
+    <updated>2021-12-19T14:40:41.883Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h2><p>此次记录的是 中国移动 H62G 家用光猫路由一体的路由器的重启方式，特别的简洁，大部分均以图片和简要的文字进行说明</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192232206.jpg" alt="img" /></p><p>有用与否请自行鉴定</p><h3 id="登录"><a class="markdownIt-Anchor" href="#登录"></a> 登录</h3><p>输入 192.168.1.1 输入，根据路由器机身后面的 说明信息获取 账号密码，进行输入即可成功登录</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192239513.png" alt="image-20211219192914777" /></p><h3 id="进入主界面"><a class="markdownIt-Anchor" href="#进入主界面"></a> 进入主界面</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192239175.png" alt="image-20211219193029015" /></p><h3 id="进入管理页面"><a class="markdownIt-Anchor" href="#进入管理页面"></a> 进入管理页面</h3><p>点击下方的 “设备重启” 按钮</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192239784.png" alt="" /></p><h3 id="点击确定重启"><a class="markdownIt-Anchor" href="#点击确定重启"></a> 点击确定重启</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192240005.png" alt="image-20211219193053485" /></p><h3 id="重启提示"><a class="markdownIt-Anchor" href="#重启提示"></a> 重启提示</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192240205.png" alt="image-20211219193103713" /></p><p>实测路由器将会在一分钟左右就从新上线</p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192238668.jpg" alt="img" style="zoom:80%;" />]]></content>
+    
+    <summary type="html">
+    
+      重启家用光猫路由一体化路由器
+    
+    </summary>
+    
+    
+      <category term="女朋友的小手册" scheme="https://www.marxcbr.cn/categories/%E5%A5%B3%E6%9C%8B%E5%8F%8B%E7%9A%84%E5%B0%8F%E6%89%8B%E5%86%8C/"/>
+    
+    
+      <category term="路由器" scheme="https://www.marxcbr.cn/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>关于博客图片无法正常显示说明</title>
@@ -488,31 +511,6 @@
       <category term="Hook" scheme="https://www.marxcbr.cn/tags/Hook/"/>
     
       <category term="进程保护" scheme="https://www.marxcbr.cn/tags/%E8%BF%9B%E7%A8%8B%E4%BF%9D%E6%8A%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Pages + Coding Pages 同时部署 HEXO 并绑定自定义域名</title>
-    <link href="https://www.marxcbr.cn/archives/dbd2cb4b.html"/>
-    <id>https://www.marxcbr.cn/archives/dbd2cb4b.html</id>
-    <published>2020-03-28T16:32:29.000Z</published>
-    <updated>2020-12-23T13:48:32.315Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>这篇文章主要介绍一下怎么将HEXO部署到 coding 中 ，并绑定自定义域名<br />这样子可以有效解决</p><ul><li>百度无法索引部署在github pages中的博客内容</li><li>国内访问速度较慢</li></ul><h2 id="注册-coding-账号进行部署"><a class="markdownIt-Anchor" href="#注册-coding-账号进行部署"></a> 注册 CODING 账号进行部署</h2><p>先注册一个账号 <a href="https://coding.net/">CODING</a></p><p>然后登陆进去</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585413955591.png" alt="MarxCBR的小屋" /></p><h3 id="点击全部项目"><a class="markdownIt-Anchor" href="#点击全部项目"></a> 点击全部项目</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414009129.png" alt="MarxCBR的小屋" /></p><h3 id="新建项目"><a class="markdownIt-Anchor" href="#新建项目"></a> 新建项目</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414039555.png" alt="MarxCBR的小屋" /></p><h3 id="选择-decops-项目"><a class="markdownIt-Anchor" href="#选择-decops-项目"></a> 选择 DecOps 项目</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414072691.png" alt="MarxCBR的小屋" /></p><h3 id="填写项目名称"><a class="markdownIt-Anchor" href="#填写项目名称"></a> 填写项目名称</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414133750.png" alt="MarxCBR的小屋" /></p><h3 id="进入项目"><a class="markdownIt-Anchor" href="#进入项目"></a> 进入项目</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414265785.png" alt="MarxCBR的小屋" /></p><h3 id="点击构建与部署中的静态网站"><a class="markdownIt-Anchor" href="#点击构建与部署中的静态网站"></a> 点击构建与部署中的静态网站</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414216950.png" alt="MarxCBR的小屋" /></p><h3 id="进行实名认证"><a class="markdownIt-Anchor" href="#进行实名认证"></a> 进行实名认证</h3><h3 id="新建静态网站"><a class="markdownIt-Anchor" href="#新建静态网站"></a> 新建静态网站</h3><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414380516.png" alt="MarxCBR的小屋" /></p><p>添加之后，可以看到这样的界面</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414480421.png" alt="MarxCBR的小屋" /></p><p>点击右上角的<strong>设置</strong></p><h3 id="绑定自定义域名"><a class="markdownIt-Anchor" href="#绑定自定义域名"></a> 绑定自定义域名</h3><p>先将自己的自定义域名解析到CODING pages 上面先</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585415697355.png" alt="MarxCBR的小屋" /></p><p>等到十分钟左右，当然也不固定啦，有时快有时慢~</p><p>然后将自己的自定义域名添加到coding pages里面去</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414647414.png" alt="MarxCBR的小屋" /></p><p>点击确定之后</p><p>可以看到这样的界面，会告诉你域名的证书正在申请中</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585414680605.png" alt="MarxCBR的小屋" /></p><p>等几分钟就会告诉你已经申请成功，显示<strong>正常</strong>了</p><h2 id="将主机的ssh公钥放到配置文件里面去"><a class="markdownIt-Anchor" href="#将主机的ssh公钥放到配置文件里面去"></a> 将主机的SSH公钥放到配置文件里面去</h2><p>进入个人设置里的SSH公钥设置</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585415032358.png" alt="MarxCBR的小屋" /></p><p>点击 新增公钥<br />然后将 ~/.ssh/id_rsa.pub 的内容拷进去就OK</p><h2 id="在-_configyml-中添加部署配置"><a class="markdownIt-Anchor" href="#在-_configyml-中添加部署配置"></a> 在 _config.yml 中添加部署配置</h2><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585415202132.png" alt="MarxCBR的小屋" /></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">git@github.com:97CBR/97CBR.github.io.git</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">git@e.coding.net:MarxCBR/marxcbr/marxcbr.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><h2 id="执行-hexo-d-进行部署"><a class="markdownIt-Anchor" href="#执行-hexo-d-进行部署"></a> 执行 hexo d 进行部署</h2><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585415333067.png" alt="MarxCBR的小屋" /></p><h2 id="踩坑记录"><a class="markdownIt-Anchor" href="#踩坑记录"></a> 踩坑记录</h2><p>这里的东西才是给力的东西呀，坑不踩无以做记录</p><h3 id="coding-域名证书申请失败"><a class="markdownIt-Anchor" href="#coding-域名证书申请失败"></a> CODING 域名证书申请失败</h3><p>报错如下</p><blockquote><p>acme:error:unauthorized: Invalid response from <a href="http://www.marxcbr.cn/.well-known/acme-challenge/Gh_xL4eBlBO8RGPnjJ-O7ao7lnFFfJGX4BajL0kE9XE">http://www.marxcbr.cn/.well-known/acme-challenge/Gh_xL4eBlBO8RGPnjJ-O7ao7lnFFfJGX4BajL0kE9XE</a> [185.199.111.153]: &quot;<!DOCTYPE html>\n<html>\n <head>\n &lt;meta http-equiv=“Content-type” content=&quot;tex</p></blockquote><p>这里是因为我之前已经部署在github上面启用HTTPS了。所以他检测申请的时候，就会存在问题。<br />所以，解决方案就是在 域名解析控制台中停用 github pages 的解析。待这边申请成功之后，再进行启用 github pages 的解析</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585415613889.png" alt="MarxCBR的小屋" /></p><p>再大概等一会儿，再去coding里面绑定自己的域名<br />如果急的话，可以用 <a href="http://tool.chinaz.com/dns/?type=1&amp;host=www.marxcbr.cn&amp;ip=">站长工具去测试</a> 看到github的解析消失之后，就可以去coding申请了</p><h3 id="设置域名的解析分流"><a class="markdownIt-Anchor" href="#设置域名的解析分流"></a> 设置域名的解析分流</h3><p>在域名解析控制台中设置域名的解析路线<br />大概可以像我这样设置，将github的优先解析到国外</p><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-29/BogImages/1585415979387.png" alt="MarxCBR的小屋" /></p><h2 id="结语"><a class="markdownIt-Anchor" href="#结语"></a> 结语</h2><p>大概就写这么多了，我明天再具体测测访问速度的变化以及百度这扑街引擎能否检索到我的博客。三更半夜了，睡了睡了~</p><center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
-    
-    <summary type="html">
-    
-      Github Pages + Coding Pages 同时部署 HEXO 并绑定自定义域名
-    
-    </summary>
-    
-    
-      <category term="HEXO" scheme="https://www.marxcbr.cn/categories/HEXO/"/>
-    
-    
-      <category term="HEXO" scheme="https://www.marxcbr.cn/tags/HEXO/"/>
-    
-      <category term="网页优化" scheme="https://www.marxcbr.cn/tags/%E7%BD%91%E9%A1%B5%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   

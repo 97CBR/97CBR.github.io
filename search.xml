@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>重启家用光猫路由一体化路由器</title>
+    <url>/archives/a082046b.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h2>
+<p>此次记录的是 中国移动 H62G 家用光猫路由一体的路由器的重启方式，特别的简洁，大部分均以图片和简要的文字进行说明</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192232206.jpg" alt="img" /></p>
+<p>有用与否请自行鉴定</p>
+<h3 id="登录"><a class="markdownIt-Anchor" href="#登录"></a> 登录</h3>
+<p>输入 192.168.1.1 输入，根据路由器机身后面的 说明信息获取 账号密码，进行输入即可成功登录</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192239513.png" alt="image-20211219192914777" /></p>
+<h3 id="进入主界面"><a class="markdownIt-Anchor" href="#进入主界面"></a> 进入主界面</h3>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192239175.png" alt="image-20211219193029015" /></p>
+<h3 id="进入管理页面"><a class="markdownIt-Anchor" href="#进入管理页面"></a> 进入管理页面</h3>
+<p>点击下方的 “设备重启” 按钮</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192239784.png" alt="" /></p>
+<h3 id="点击确定重启"><a class="markdownIt-Anchor" href="#点击确定重启"></a> 点击确定重启</h3>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192240005.png" alt="image-20211219193053485" /></p>
+<h3 id="重启提示"><a class="markdownIt-Anchor" href="#重启提示"></a> 重启提示</h3>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192240205.png" alt="image-20211219193103713" /></p>
+<p>实测路由器将会在一分钟左右就从新上线</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202112192238668.jpg" alt="img" style="zoom:80%;" />
+]]></content>
+      <categories>
+        <category>女朋友的小手册</category>
+      </categories>
+      <tags>
+        <tag>路由器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于博客图片无法正常显示说明</title>
     <url>/archives/ce7c2b4e.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="404-not-found"><a class="markdownIt-Anchor" href="#404-not-found"></a> 404 NOT FOUND</h2>
