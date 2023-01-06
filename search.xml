@@ -42,6 +42,10 @@
 <h2 id="送了自己一个生日礼物"><a class="markdownIt-Anchor" href="#送了自己一个生日礼物"></a> 送了自己一个生日礼物</h2>
 <p>讲真，往前二十多岁，自己都没有在自己生日的时候给自己送过礼物。生日嘛，普普通通的，该干嘛干嘛，不整这么多花里胡哨的。能收到同学们送的祝福就已经很快乐了，更别说送一些小礼物的同学了，那简直是喜出望外啊。哈哈哈，好歹有人还知道你的生日嘛，咱的期望不能挂这么高。</p>
 <p>回到送自己生日礼物这件事上，我送了自己一个什么礼物呢？</p>
+<div class="note success modern"><ul>
+<li>一部无反相机（SONY A7R2 + 28-70 OSS 镜头）</li>
+</ul>
+</div>
 <img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202201151902068.jpg" alt="a7r2" style="zoom:50%;" />
 <p>为啥想说送自己一个相机呢，最初买相机的想法应该是可以追溯到初三的那个傍晚，在晚读的时候，被天边的霞光留下了深刻印象吧，那时想着，有个相机可以将这些画面拍下来就太好了。当然，现在送自己一个相机不是仅仅为了圆自己少时的一个愿望，而是希望可以给自己的生活带来多一些改变，一些变化。讲得通俗可以说是用来记录生活，讲得高雅就是提高自己的审美。但是只有我自己最清楚，是希望可以给自己带来多一些变化，不要太枯燥着day by day。</p>
 <p>相机的出现确实给我带来不少变化，虽然说成本并不低，但是好歹是有足够的收获，它会继续发挥更大的作用的，这点是毋庸置疑的。</p>
@@ -2158,53 +2162,56 @@ repaint：刷新界面</p>
 <h2 id="闲话少说操作一波"><a class="markdownIt-Anchor" href="#闲话少说操作一波"></a> 闲话少说，操作一波</h2>
 <p>打开VS，我这里是VS2017，使用其它版本的同学应该也差不多，参考参考借鉴借鉴就好</p>
 <p>还记得之前文章里面有给大家说过给VS安装上 QT插件、GitHub插件、Gitee插件嘛</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/VS%E5%88%9B%E5%BB%BAQT%E5%B7%A5%E7%A8%8B%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub%E4%B8%AD/1560080663232.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062338566.png" alt="img" /></p>
 <p>如果还没装的话，可以先进去装一下，装好再进行下面的步骤哟</p>
 <p>给你两分钟，打开VS然后将插件装起来</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/VS%E5%88%9B%E5%BB%BAQT%E5%B7%A5%E7%A8%8B%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub%E4%B8%AD/1560080829083.png" alt="" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062338506.webp" alt="img" style="zoom:50%;" />
 <p>两分钟过去了~~</p>
 <h2 id="使用团队资源管理器"><a class="markdownIt-Anchor" href="#使用团队资源管理器"></a> 使用团队资源管理器</h2>
 <p>我们打开 右边的界面方案资源管理器<br />
 然后点击隔壁的 团队资源管理器</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560078136589.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062338679.png" alt="img" /></p>
 <p>这个时候，如果你是装好了这两个插件的话，是应该看到有GitHub和gitee的</p>
 <h3 id="登录git平台账号"><a class="markdownIt-Anchor" href="#登录git平台账号"></a> 登录Git平台账号</h3>
-<p>然后，点击 登录 就可以看到这样的界面了</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560078025140.png" alt="" /></p>
+<p>然后，点击 <strong>登录</strong> 就可以看到这样的界面了</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062338493.png" alt="img" /></p>
 <p>OK，输入好自己的账号密码之后，登录一下下<br />
 你就会看到这个GitHub的选项卡下有几个选项了</p>
 <h3 id="创建仓库"><a class="markdownIt-Anchor" href="#创建仓库"></a> 创建仓库</h3>
 <p>咱们创建一个仓库先</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560078157492.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062338908.png" alt="img" /></p>
 <p>我们在这里将 名称 写一下、描述写一下、路径选好选准确了！<br />
 GitHub忽略的选项，他能识别到VS项目的<br />
 而许可证的话，看自己情况选<br />
 专用存储库是私有的，别人访问不了的。敏感项目的话，建议选上！</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560079685453.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062338432.png" alt="img" /></p>
 <p>我在这里就不点专用了，这里选好代码仓库位置，待会创建项目的时候，你就会发现项目创建路径会自动默认到这个位置了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/VS%E5%88%9B%E5%BB%BAQT%E5%B7%A5%E7%A8%8B%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub%E4%B8%AD/1560081516092.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339062.png" alt="img" /></p>
 <p>在项目下方的解决方案那里，点击新建<sub>，不是在整个VS左上角点新建哦。看准了哈</sub></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560078965838.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339055.png" alt="img" /></p>
 <p>呐，是不是明显看到位置自动是我们刚创建项目仓库的位置啦~</p>
 <p>接着就是QT创建项目的常规步骤</p>
 <h2 id="创建qt项目"><a class="markdownIt-Anchor" href="#创建qt项目"></a> 创建QT项目</h2>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560075844053.png" alt="" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560075927392.png" alt="" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560075964876.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339183.png" alt="img" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339025.png" alt="img" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339919.png" alt="img" /></p>
 <p>因为之前写完那篇环境搭建的文章出来后，有同学给我反映说不够详细，我在这里就完全又走了一次流程了哦。一个截图都不少的~</p>
 <p>我们F5直接运行一波，看到能正常出来了。OK，咱们可以先把这个最最最基础的版本给提交到GitHub上去先。后面再提交新的更改进去</p>
 <p>点击 <strong>更改</strong></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560079924063.png" alt="" /><br />
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339852.png" alt="img" /><br />
 可以看到项目内的文件的更改情况，添加、删除、修改都可以看到<br />
 我们再将这次上传的 更改说明写好，写清楚！</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560080000441.png" alt="" /><br />
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339744.webp" alt="img" /><br />
 写完之后，点击 <strong>同步</strong></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/VS%E5%88%9B%E5%BB%BAQT%E5%B7%A5%E7%A8%8B%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0GitHub%E4%B8%AD/1560082065469.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339872.png" alt="img" /></p>
 <p>点击 <strong>推送</strong></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560080029467.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062339443.png" alt="img" /></p>
 <p>看到这样的界面，说明你已经成功将代码更改推送到GitHub上了</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-6-9/QT%E5%81%9A%E4%B8%80%E4%B8%AA%E6%98%A0%E5%B0%84%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E5%99%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/1560080065247.png" alt="" /></p>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+<p><a href="https://github.com/97CBR/WeChatDatToJpg/blob/main/README.md">WeChatDatToJpg/README.md at main · 97CBR/WeChatDatToJpg (github.com)</a></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062340124.png" alt="img" /></p>
+<p>嗯，文章差不多到这里就完了。看到这里的你，几分钟过去了，文章也看完了。这里面将创建仓库和项目流程又走了一遍。</p>
+<p>如果是先创建项目再创建仓库的话也是可以的。可以先建立一个仓库之后，再clone回来。差不多其实，但是像本人上面那样创建一下，本人感觉更加顺滑一些~~~大家看情况来搞就好了</p>
+]]></content>
       <categories>
         <category>QT开发</category>
       </categories>
@@ -2243,14 +2250,14 @@ GitHub忽略的选项，他能识别到VS项目的<br />
 <p>Python的代码是通过module进行组织的，所以，对某些功能的热更新就是可以通过对module更新就可以了。<br />
 在Python中，如果重新import 一个已经被import的模块时，并不会重新执行import新的模块。所以，在这个时候，我们希望可以重新加载模块的时候，就需要对模块进行删除后，再重新import进来。<br />
 而在sys.modules保存了已经加载过的模块。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-13/Python_%E7%83%AD%E6%9B%B4%E6%96%B0/1555127410118.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062319211.webp" alt="img" /></p>
 <h2 id="利用之前的客户端进行展示效果"><a class="markdownIt-Anchor" href="#利用之前的客户端进行展示效果"></a> 利用之前的客户端进行展示效果</h2>
 <p>为了方便看到展示，我就沿用上次客户端的界面，进行简单修改后，展示给大家看，热更新的效果。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-13/Python_%E7%83%AD%E6%9B%B4%E6%96%B0/1555127515855.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062320674.png" alt="img" /></p>
 <p>左边的按钮是运行模块加载进来的函数，右边的按钮是手动点一下热更新。便于本地手动调试热更新。在后面实现的“发布订阅”情况中，服务端发布更新消息后，不用手动点 热更新 就可以对软件进行自动更新了。</p>
 <h2 id="测试思路及效果"><a class="markdownIt-Anchor" href="#测试思路及效果"></a> 测试思路及效果</h2>
 <p>简单实现一个demo，引用myfunction这个模块，运行里面的某个函数一两次后，修改那个被运行的函数实现，然后对myfunction这个模块进行热更新，看看效果怎么样?</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-13/Python_%E7%83%AD%E6%9B%B4%E6%96%B0/1555086396180.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062322108.png" alt="img" /></p>
 <p>在热更新前，随机产生的数字在原函数里面，版本号为0.0.1，是可以比较明显看出 两个数 是运行 “相加” 操作的。<br />
 点击了热更新Button后，软件并未重启，在更新后，可以 看到功能版本号发生了改变，变成了0.1.1，说明已经是热更新完成了的。再点击运行功能，可以看到结果已经变成了 两个数字 进行了 “相减‘ 操作。</p>
 <h2 id="着手实现-cs模式下-的自动热更新"><a class="markdownIt-Anchor" href="#着手实现-cs模式下-的自动热更新"></a> 着手实现 CS模式下 的自动热更新</h2>
@@ -2273,8 +2280,8 @@ GitHub忽略的选项，他能识别到VS项目的<br />
 至于怎么筛选出那些用户为测试用户呢？其中有个办法是可以用个哈希函数对用户某个值，如用户名，进行处理，符合的就推送。当然还有很多很多的策略，实现执行起来的时候，也不会像我说的那么简单，感兴趣的同学可以自行查阅资料。</p>
 <h3 id="利用redis发送更新消息"><a class="markdownIt-Anchor" href="#利用redis发送更新消息"></a> 利用Redis发送更新消息</h3>
 <p>接下来，我们来测试一下发布更新功能的消息后，有没正常热更新功能。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-13/Python_%E7%83%AD%E6%9B%B4%E6%96%B0/1555088922933.png" alt="" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-13/Python_%E7%83%AD%E6%9B%B4%E6%96%B0/1555088948860.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062323001.png" alt="img" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062323066.png" alt="img" /></p>
 <p>在这里要提醒一下，如果你在热更新前导入的模块生成了一个对象x，这个时候，你热更新了，然后又生成一个对象y。这个时候，你会发现，x指向的仍旧是旧的那个类，而y则指向了新的类。这个时候，可以通过修改x的__class__属性来对 x 的类进行强制修改，可以这样写：</p>
 <blockquote>
 <p>x.<strong>class</strong> == y.你的类</p>
@@ -4013,74 +4020,75 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 时间来到昨天，腾出了一个晚上。想着公司的测试服务器是时候要好好地排查一下安全问题以及分析一下入侵者的行径和他在里面干了什么了。</p>
 <h2 id="远程过去"><a class="markdownIt-Anchor" href="#远程过去"></a> 远程过去</h2>
 <p>话不多说，马上登录过去看看。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554267236580.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334523.png" alt="img" /></p>
 <p>在登录页面，可以看到左下角那几个猖獗的账号，入侵了别人服务器，不好好隐藏一下自己，还公然show出自己的用户名，实在太流批了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554267438808.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334256.webp" alt="img" /></p>
 <h2 id="使用d盾扫描看看"><a class="markdownIt-Anchor" href="#使用d盾扫描看看"></a> 使用D盾扫描看看</h2>
 <p>进入主机后，下了个D盾简单的扫了一下用户目录。果然有点东西的,在root$这个账号下有菜刀用的马。估计是传了一个小马进来然后再菜刀上大马搞的服务器。然后再另外一个用户下面呈现独占模式，所以，应该他这个账号还没注销。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554267884948.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334387.png" alt="img" /></p>
 <p>看看进程列表果然有很多这个用户下启动的软件，包括了他的游戏私服以及聊天机器人在内的软件进程。<br />
 接着到终端下面看一下什么时候连进去的。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554268227323.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334666.png" alt="img" /></p>
 <p>居然昨天下午5点还连进去过。太叼了吧。然后我便到控制台创建一个快照，以备后续取证的时候需要证据的时候用到，然后我就把它账号给注销了。顺带把他的进程也给清掉了。</p>
 <h2 id="找出他是谁"><a class="markdownIt-Anchor" href="#找出他是谁"></a> 找出他是谁</h2>
 <p>在进程里面找到了他机器人是由“酷Q air”提供服务的，进入他的聊天机器人文件夹里面，打开一下他的机器人。看到了一个账号，数了一下，10位数，大概猜测是QQ号。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554269083037.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334222.webp" alt="img" /></p>
 <p>重复登录一下看看，果然验证了我的猜测。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554269292230.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334029.png" alt="img" /></p>
 <p>接着便尝试到QQ中找一下这个账号，了解一下情况。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279402329.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062334960.png" alt="img" /></p>
 <p>使用小号访问他的空间看看</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279356886.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333819.webp" alt="img" /></p>
 <p>可以很直观的看出这个只是一个小号。能挖掘的信息不多。然后便放弃了这个信息，准备挖其他信息。<br />
 回到服务器上面。看到他其中的一个用户名qq11xxxxx24</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554269693996.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333937.png" alt="img" /></p>
 <p>所以没猜错的话，这个应该也是他的QQ号。OK，还是用小号尝试找找看他的信息。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279316945.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333032.png" alt="img" /></p>
 <p>“咸鱼王”的头像壁纸跟小号的都是“我的世界”的壁纸。所以基本可以大概率确定两个账号为同一个人所有。</p>
 <h2 id="找到他的位置"><a class="markdownIt-Anchor" href="#找到他的位置"></a> 找到他的位置</h2>
 <p>而且他的所在地是“河南 郑州”，是真的在河南吗？<br />
 接着到QQ空间看看情况怎么样。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279282548.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333760.webp" alt="img" /></p>
 <p>发现他昨天早上还发了一条说说，定位地点就是郑州市某学院。喜欢玩“我的世界””王者荣耀“，刚打上砖石，让他感觉好嗨哟，感觉人生已经到达了高潮~~~<br />
 后续多条说说均定位于郑州市某学院，后面有一条定位点是郑州市亚太明珠，时间是，2月21，以及上一两条信息都是在那个地方，再联系上他是专科学生，2月21前大概率是寒假时间。基本可以大概率推断出，这个地方就是他的家所在地区了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279216941.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333038.webp" alt="img" /></p>
 <p>在多条说说中的定位可以看到他的定位点是某汽车工厂，联合他的学历，可以猜测到那个地方是他的实习工作地点了。</p>
 <h2 id="找到他叫啥"><a class="markdownIt-Anchor" href="#找到他叫啥"></a> 找到他叫啥</h2>
 <p>但是直到现在，我们还是不知道他叫什么。。。<br />
 所以，我又回到了服务器，看一下还能不能挖出点信息。<br />
 回到服务器，找到他大号对应的账号的文件夹里面。到roaming这个缓存数据文件夹里面找了找东西，无意中发现了百度云盘？为啥有百度云盘？<br />
 难道他文档里面那些私服文件都是百度云盘下载的？</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554271635392.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333135.webp" alt="img" /></p>
 <p>打开百度云盘看一下，他居然点了记住密码。。。<br />
 顺利进入里面，看了一下传输列表，果然文件都是百度云盘下的。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554271828131.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333364.png" alt="img" /></p>
 <p>但是这些东西对我来说没用呀。等等，百度云盘的账号一般有两种，一种是邮箱型，另外一种是手机号码型。<br />
 他会不会是手机号码型的呢？<br />
 点击切换账号后，结果另人十分欣喜。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554271967241.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333320.png" alt="img" /></p>
 <p>拿到手机号了，就肯定要打开某付宝啦。看看这个兄弟的大宝名。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279168324.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333878.png" alt="img" /></p>
 <p>xx钰，嗯，让我猜猜他姓啥。赵、钱、孙、陈、张…………都不对。。。<br />
 这可咋办哟，正当我一筹莫展的时候，隔壁的朋友说：你不是有他空间了么，到空间里面看啊，肯定有他名字出现的，比如他生日什么的时候，就会有人留言说出他的名字的。<br />
 诶，这可太机智了，我就知道QQ空间里面，能挖的信息不止那么一点点的。<br />
 随即又来到他的空间，Ctrl+F，一搜“x钰”，再翻多几个页面。就出现了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279070287.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333900.png" alt="img" /></p>
 <p>看得出他很在乎他妹妹吗，都出宣战书了。（谁还没个年少轻狂的时候呢）</p>
 <h2 id="其实顺手还找到了他本人的照片"><a class="markdownIt-Anchor" href="#其实顺手还找到了他本人的照片"></a> 其实顺手还找到了他本人的照片</h2>
 <p>这个时候已经基本可以拿到他的所有信息了。包括了，姓名、手机号、所在地区、所在学校、实习地点以及游戏爱好。顺便提一嘴，肖像其实在QQ空间里面也挖出来了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554280601166.png" alt="" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554279840186.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333263.webp" alt="img" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333342.png" alt="img" /></p>
 <h2 id="后续"><a class="markdownIt-Anchor" href="#后续"></a> 后续</h2>
 <p>后续，今早添加他为好友后，进入到了他的私服群。因为昨晚服务器已经被我处理过了，所以，他今早就用不了。<br />
 给大家看一段截图。大家乐呵乐呵就好。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554280098857.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333980.png" alt="img" /></p>
 <p>非法使用别人服务器被清理后还说服务器被盗了，<strong>我从未见过如此厚颜无耻之人</strong>！</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E6%98%AF%E8%B0%81%E8%AE%A9%E6%88%91%E7%9A%84%E7%BA%BF%E4%B8%8A%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AA%81%E7%84%B6%E5%8F%98%E6%88%90%E6%B8%B8%E6%88%8F%E7%A7%81%E6%9C%8D/1554280061068.png" alt="" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062333824.webp" alt="img" style="zoom:50%;" />
 <h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
 <p>大家可以很明显的看到在QQ空间里面由于不注意保护隐私安全、任意一个人通过其QQ空间稍微总结观察一下便可以获取到大量信息。而且，上文中的那位老哥明显已经触犯《中华人民共和国网络安全法》了。各位观众老爷，研究信息安全的同学们，来跟我背一遍社会主义核心价值观！</p>
 <p><strong>富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善</strong></p>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301062332412.webp" alt="img" /></p>
+]]></content>
       <categories>
         <category>信息安全</category>
       </categories>
@@ -4165,17 +4173,17 @@ check，没有参数，返回当前服务器版本号以及更新信息。</p>
 附送 <a href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0">下载链接</a></p>
 <h3 id="打开vmware安装包"><a class="markdownIt-Anchor" href="#打开vmware安装包"></a> 打开VMware安装包</h3>
 <p>OK ,软件已经下载好了，我就不下一次了，之前下载安装过了。漫长的下载后，接着就打开软件，VMware-workstation-14.exe<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553925308463.png" alt="" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553926019253.png" alt="" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070116107.png" alt="enter description here" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120306.png" alt="enter description here" /></p>
 <p>一路Next下去，他会提示修改安装位置，在这里推荐修改一个位置比较好，可以安装在一个你自己喜欢的位置，默认安装在C盘，还是太伤我C盘的空间了。(C盘一个T空间的请忽略……)<br />
 在这里我安装到E盘，因为我E盘里面安装的都是编程IDE和开发环境。所以，大家根据自己的需求来装就好。<br />
 下面的那个选择框是说安装一个增强型键盘驱动程序，自己看情况选择。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553926081656.png" alt="" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553926149488.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120981.png" alt="enter description here" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120365.png" alt="enter description here" /></p>
 <p>一路Next，最后Install就可以完成安装了。再点击Finish就好了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553926235692.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120204.png" alt="enter description here" /></p>
 <p>启动后，界面长这个样子。然后点击Help，再选择输入授权秘钥就OK了。在这里再提醒一次，尽量支持正版哈。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553926380199.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120021.png" alt="enter description here" /></p>
 <p>到这里VMware的安装就完成了。接下来就是安装虚拟机了。</p>
 <h2 id="安装kali虚拟机"><a class="markdownIt-Anchor" href="#安装kali虚拟机"></a> 安装kali虚拟机</h2>
 <p>本教程以Kali Linux为例子，为大家安装一个 Kali Linux 操作系统。Ubuntu和centos和Windows系统的操作类似。Mac的稍有不同，需要改几个配置文件。有兴趣的可以自行查阅资料，我现在就不细说这个问题，后期可能会有一篇说明Mac虚拟机安装的文章吧~</p>
@@ -4186,68 +4194,68 @@ check，没有参数，返回当前服务器版本号以及更新信息。</p>
 <p>OK，咱们就挑最难的那种讲讲</p>
 <h3 id="第一种镜像安装"><a class="markdownIt-Anchor" href="#第一种镜像安装"></a> 第一种：镜像安装</h3>
 <p>下载kali的镜像，到官网下载页面 &gt;<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553927247277.png" alt="" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120253.png" alt="enter description here" /></p>
 <p>我们选择第三个，Kali Linux 64位的下载，中规中矩。用种子下载听说可以快一点哦。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553927465210.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120622.png" alt="enter description here" /></p>
 <p>几分钟过后，镜像下载好了。我们便来到VMware，准备安装系统。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553927822476.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120725.png" alt="enter description here" /></p>
 <p>接着进入引导页面，选择自定义高级安装</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553927957164.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120362.png" alt="enter description here" /></p>
 <p>然后一路Next</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553927998094.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120586.png" alt="enter description here" /></p>
 <p>然后，选择Linux，下面的版本选择debian 7.x 64-bit</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553928189136.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120256.png" alt="enter description here" /></p>
 <p>选择安装位置，在起一个狂拽酷炫的名字就可以下一步了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553928351486.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120419.png" alt="enter description here" /></p>
 <p>接着选一下你希望你的虚拟机是几核几线程的选项</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553928422395.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121358.png" alt="enter description here" /></p>
 <p>下一步便来到了选择虚拟机内存页面，建议内存都很低……所以我还是建议按照自己的PC来选择多大内存吧。太小的话，你用起来开，太大的话可能会出一些不可预料的错误。。。我在这里选择4G的内存分给他。因为我有12G内存，给他1/3,不过分不过分。。。<br />
 网络类型，有四个，桥接、NAT（ 网络地址转换）、主机模式、不联网。我这里默认用NAT就OK。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553928769211.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121927.png" alt="enter description here" /></p>
 <p>下面的硬盘和控制模式就默认就可以了。。。一路next下去。<br />
 出现要你选择磁盘大小的时候，根据自己电脑情况自行判断选择。基于我1T的外置硬盘，我就分了50G空间给他。然后选择虚拟磁盘拆分就OK。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553928931855.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121097.png" alt="enter description here" /></p>
 <p>接着到虚拟磁盘存储位置选择的时候，就选择之前的那个文件夹就好了</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553929078976.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121158.png" alt="enter description here" /></p>
 <p>下一步点完成后，会来到首页，点击编辑虚拟机设置</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553929115261.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121448.png" alt="enter description here" /></p>
 <p>来到设置页面后，选择CD/DVD项。再浏览刚才下载回来的iso镜像（PS：你想装什么系统就在这个时候选什么镜像）</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553929187227.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121364.png" alt="enter description here" /></p>
 <p>OK保存后，便可以开机了。Power on 启动起来！！！<br />
 用键盘的↑、↓选择岛图形化安装选项，回车。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553929323243.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121739.png" alt="enter description here" /></p>
 <p>然后选择安装语言，在这里建议大家选默认的English，多用英文可以有效提高英语水平哟，也可以避免踩一些中文的坑~~<br />
 回车后，叫你选区域，那就选Hong Kong咯。。。<br />
 然后就是选择键盘布局，有中国当然选中国呀。<br />
 回车后……便是一顿自动操作…………<br />
 终于停下来时i，叫你写hostname，用来在网络中分辨你的系统………以及下面那个域名，填自己喜欢的就好啦。<br />
 关键的是<strong>设置密码</strong>啦，后面都是要用的，大家设置后<strong>千万要记住</strong>哟，怕写错的，可以勾下面的显示密码来确认一下下</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553929806510.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121771.png" alt="enter description here" /></p>
 <p>接着一路continue，在分区的时候，要将NO改成YES。如下即可</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553929962229.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121197.png" alt="enter description here" /></p>
 <p>然后就不用操作了，一个钟半个钟后便安装完毕了。。。（安装在SSD的同学请忽略……）<br />
 后面的包管理选择、引导之类的（<strong>注意GRUB是要安装到/dev/sda这个设备上别顺手就点过去了哦……会扑街的</strong>），其他的相信大家都可以看懂然后默认继续就好了。<br />
 这里还是再提醒多一下吧</p>
 <div class="note info flat"><p>注意GRUB是要安装到/dev/sda这个设备上别顺手就点过去了哦</p>
 </div>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553930635743.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121762.png" alt="enter description here" /></p>
 <p>当你看到这个页面的时候，你已经成功98%了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553930814977.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121653.png" alt="enter description here" /></p>
 <p>重启虚拟机系统后你就可以看到这帅的爆的kali Linux啦</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-30/VMware_Workstation_%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8ALinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85_%E6%8C%87%E5%8C%97/1553932753054.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121482.png" alt="enter description here" /></p>
 <h3 id="第二第三种文件安装"><a class="markdownIt-Anchor" href="#第二第三种文件安装"></a> 第二第三种：文件安装</h3>
 <p>第二第三种很像，我就并在一起讲了。关键是拿到那个打包好的系统文件夹。<br />
 OK ，这里我有一个从别人主机上面拖过来的系统，解压后就进入VMware的首页</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585330389377.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122928.png" alt="enter description here" /></p>
 <p>然后选择刚才解压出来的文件夹。这里我选择Ubuntu9的这个文件夹。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585330427726.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122788.png" alt="enter description here" /></p>
 <p>点击Open便会自动加载进左边的主机列表啦。<br />
 然后开机，你就可以看到系统了。（很多同学都没见过Ubuntu9的样子吧，哈哈哈~~~）</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585330435651.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122842.png" alt="enter description here" /></p>
 <h2 id="结语"><a class="markdownIt-Anchor" href="#结语"></a> 结语</h2>
 <p>本篇不完全指北的关键不在于系统安装的步骤。因为每个系统安装的步骤都是一个样。用物理机来说，把光盘或者刻录好镜像的U盘怼进去后，开机按Esc或者F9之类的，选择启动的方式就可以进入安装系统的引导界面了。按照里面的安装提示选择自己的选项就好了。<br />
-在这里吐槽一句，WIN10的安装，如果它安装在MBR磁盘上，你不格式化磁盘转成GPT格式的话，会给你甩一句“无法在驱动器0分区上安装windows”的问题，这个问题，改天写一篇短文简单说明一下该怎么解决吧。</p>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+在这里吐槽一句，WIN10的安装，如果它安装在MBR磁盘上，你不格式化磁盘转成GPT格式的话，会给你甩一句“无法在驱动器0分区上安装windows”的问题，这个问题，改天写一篇短文简单说明一下该怎么解决吧</p>
+]]></content>
       <categories>
         <category>虚拟机</category>
       </categories>
