@@ -3810,14 +3810,14 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 由于这两个工具的配置比较简单，我就不作说明了，大家可以自行百度一下，随意参考一种都可以顺利配置好这两个外部工具的。</p>
 <h3 id="打开designer绘制"><a class="markdownIt-Anchor" href="#打开designer绘制"></a> 打开designer绘制</h3>
 <p>接着，打开designer来对界面进行绘制设计。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-10/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9B%B4%E6%96%B0/1554884974697.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071605711.png" alt="img" /></p>
 <p>大概就这样就可以了，一个标题、一个文本框、两个按钮就足够显示了。<br />
 虽然长得丑了一点，但是我们这次文章的关键不是界面的美化，所以就不作其他处理了。</p>
 <h3 id="pyuic-生成代码"><a class="markdownIt-Anchor" href="#pyuic-生成代码"></a> pyuic 生成代码</h3>
 <p>保存好，再到pycharm里面对ui文件运行一下PYUIC就OK</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-10/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9B%B4%E6%96%B0/1554885128890.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071604523.png" alt="img" /></p>
 <p>这个时候，界面代码已经由设计图转成Python代码了，可以看到它生成了一个类，但是还跑不动，因为没有引用到它。所以，我们先放它到一边。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-10/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9B%B4%E6%96%B0/1554885378134.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071604562.png" alt="img" /></p>
 <h2 id="创建新文件和类继承生成的界面"><a class="markdownIt-Anchor" href="#创建新文件和类继承生成的界面"></a> 创建新文件和类继承生成的界面</h2>
 <p>接着，我们就重新创建好一个py文件，导入我们预期就要用到的库。</p>
 <blockquote>
@@ -3856,7 +3856,7 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 <p>这里说一下写代码踩的坑吧<br />
 1、因为用的是urllib去下载的文件，多级目录下，文件不存在的时候，并不会在目标目录自动新建目录。所以，在下载的时候，需要对路径进行处理，筛选出目标目录，mkdir创建一下目录后，再下载目标文件。具体实现可以看downloadFiles函数，代码很简单，理解起来肯定没问题。</p>
 <h2 id="实现效果"><a class="markdownIt-Anchor" href="#实现效果"></a> 实现效果</h2>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-10/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9B%B4%E6%96%B0/1554899846798.png" alt="" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071604493.png" alt="img" /></p>
 <p>点击检查更新会将需要更新的文件列在上面<br />
 点击下载便会自动下载文件了。而且有个简单的进度条可以看到进度。</p>
 <h2 id="代码呈上"><a class="markdownIt-Anchor" href="#代码呈上"></a> 代码呈上</h2>
@@ -3883,31 +3883,31 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
     <url>/archives/9ae4da43.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="安装-apk-killer"><a class="markdownIt-Anchor" href="#安装-apk-killer"></a> 安装 Apk killer</h2>
 <p>安装apk killer ，如果没有安装jdk的话，会有以下提示</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554297434966.png" alt="MarxCBR的小屋" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554298724475.png" alt="MarxCBR的小屋" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554298945310.png" alt="MarxCBR的小屋" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554299744483.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831697-1878090224.png" alt="img" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831720-473693470.png" alt="img" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831770-1535040412.png" alt="img" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831784-440972803.png" alt="img" /></p>
 <p>按照提示装好后，便基本没他什么事了。</p>
 <h2 id="给软件查一下壳"><a class="markdownIt-Anchor" href="#给软件查一下壳"></a> 给软件查一下壳</h2>
-<p>然后用手机发送一个软件到电脑上<br />
-查一下壳<br />
+<p>然后用手机发送一个软件到电脑上</p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831806-399510169.png" alt="img" />查一下壳<br />
 <img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554300936597.png" alt="MarxCBR的小屋" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554300589007.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831822-579423235.png" alt="img" /></p>
 <p>由于已经按照了那个APK-DB，所以能看到软件图标。分辨发送过来的文件是哪个软件比较快。</p>
 <h2 id="进行自动逆向"><a class="markdownIt-Anchor" href="#进行自动逆向"></a> 进行自动逆向</h2>
 <p>接着拖apk到apk killer里面，可以看到右下角的日志在疯狂的跑</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554300822300.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831843-1550766138.png" alt="img" /></p>
 <p>在最后面的结果那个可以看到apk源码反编译失败</p>
 <h3 id="修改默认的apktool"><a class="markdownIt-Anchor" href="#修改默认的apktool"></a> 修改默认的apktool</h3>
 <p>在Android栏中的apktool 管理器中添加一下工具</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554301531915.png" alt="MarxCBR的小屋" /><br />
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831930-2081499128.png" alt="img" /><br />
 添加好后，在下面 默认apktool版本哪里，选择自己刚才添加的那个。<br />
 然后删除掉刚才反编译源码失败的那个工程</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554301623455.png" alt="" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831932-2034744392.png" alt="img" /></p>
 <h3 id="重新进行逆向"><a class="markdownIt-Anchor" href="#重新进行逆向"></a> 重新进行逆向</h3>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554301672071.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831934-1674127404.png" alt="img" /></p>
 <p>这个时候，界面大概长这个样子</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554301819795.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125831962-877572783.png" alt="img" /></p>
 <h2 id="准备逆向分析"><a class="markdownIt-Anchor" href="#准备逆向分析"></a> 准备逆向分析</h2>
 <p>上面的图片一共有七个点</p>
 <blockquote>
@@ -3923,19 +3923,14 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 </blockquote>
 <p>我们本篇文章不展开说明上面对应的每一个点，东西说太多的话，影响主线内容哈。</p>
 <p>我们现在应该关注的是“3-入口点“。那个是应用启动后立即运行的位置。点击蓝色的字就会自动跳转到对应的文件以及方法里面了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554301998210.png" alt="MarxCBR的小屋" /></p>
 <p>一头雾水吧，相信很多同学都没有接触过smali代码。<br />
 没事，我们跳转到<strong>OnCreate</strong>方法去。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554302070149.png" alt="MarxCBR的小屋" /></p>
 <p>这个就是OnCreate方法了</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554302091171.png" alt="MarxCBR的小屋" /></p>
 <p>还是看不懂怎么办？</p>
 <h2 id="尝试获取逆向出来的java伪代码"><a class="markdownIt-Anchor" href="#尝试获取逆向出来的java伪代码"></a> 尝试获取逆向出来的Java伪代码</h2>
 <p>没事，咱们可以看看他们java代码大概长啥样，好吧。要不我们刚才为了反编译源码折腾这么久是为了啥呢。<br />
 点击上面的“咖啡“，你就会进入”软件的妙妙屋“了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554302265596.png" alt="MarxCBR的小屋" /></p>
 <p>跳转到那个页面后，搜索OnCreate，就会找到那个函数了</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-3/%E5%AE%89%E5%8D%93%E9%80%86%E5%90%91/1554302438166.png" alt="MarxCBR的小屋" /></p>
 <p>上面就是入口点的基本操作了。</p>
 <h2 id="修改应用图标以及名称"><a class="markdownIt-Anchor" href="#修改应用图标以及名称"></a> 修改应用图标以及名称</h2>
 <p>回到主页面。打开“工程管理器”选项。<br />
@@ -3953,16 +3948,16 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 列出应用必须链接到的库</p>
 </blockquote>
 <p>可以清楚看到在application这个标签中。对图标和应用名称有明确定义指向</p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832023-2145563530.png" alt="img" /></p>
 <p>这个时候，我们直接去res这个目录里面去找对应的资源。</p>
 <h3 id="咱们就先改个名字"><a class="markdownIt-Anchor" href="#咱们就先改个名字"></a> 咱们就先改个名字</h3>
 <p>进入到/res/values/strings.xml中，找到这个app_name。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377591504.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832026-1677112829.png" alt="img" /></p>
 <p>但是名字不是叫画板呀。<br />
 因为画板是中文的软件叫法，painter是英文的叫法。所以，这个时候，我们可以去到中文对应的资源文件夹中。/res/values-zh-rCN/strings.xml中。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377636020.png" alt="MarxCBR的小屋" /></p>
-<p>在这里，我将软件名字换成“手绘板”。<br />
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832037-976318593.png" alt="img" /><br />
 然后在顶栏选中Android，然后点击编译。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377682477.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832057-822976646.png" alt="img" /></p>
 <p>接着用数据线连上手机。进入“开发者模式”。<br />
 什么？开发者模式找不到？<br />
 莫慌，让我来告诉你这个“开发者模式”在哪里吧。<br />
@@ -3977,30 +3972,29 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 然后再确认一下调试授权就可以跟你的主机搭上关系了。</p>
 </blockquote>
 <p>图示如下</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377721886.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832180-271419351.png" alt="img" /></p>
 <p>OK,一阵折腾后，开发者模式终于搞定了。<br />
 然后回到顶栏，在apk安装管理器右边有个设备，点刷新再看一下下拉框。可以看到一串字母加数字的东西了。</p>
 <p>这个时候，点击安装，这个时候就会在手机上面将刚才的那个更改编译好的软件安装到手机。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377744438.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832182-1846939305.png" alt="img" /></p>
 <p>如果手机是还没安装过这个软件的话，直接这样安装是不会有问题的。但是如果已经安装过了的同学，再点安装的时候就会提示冲突。因为重新编译的版本使用是自己的签名文件。导致了软件签名冲突。</p>
 <p>这个时候点击卸载，将软件卸载掉就好了。然后再安装就不会出问题了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377765916.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832183-1172476758.png" alt="img" /></p>
 <p>这个时候已经可以看到名字已经被改过来了。</p>
 <h3 id="咱们再改个图标"><a class="markdownIt-Anchor" href="#咱们再改个图标"></a> 咱们再改个图标</h3>
 <p>前面已经找到了icon的所在地。我们就去drawable文件夹去找到对应的icon图片给替换过来。因为Android系统不同版本支持的图片情况不一样（这样解释好像不够准确）。所以会有很多drawable文件夹，咱们一个个去看。找到符合图片内容就换掉就好了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377814876.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832184-1393428300.png" alt="img" /></p>
 <p>换一下图标，一般用png格式</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377828061.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832192-1329071914.png" alt="img" /></p>
 <p>然后从新编译，打包就可以看到图标已经被替换过来了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377840377.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832214-342056790.png" alt="img" /></p>
 <p>安装后，打开可以看到软件依旧可以正常使用。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2020-3-28/BogImages/1585377856645.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190514125832301-94041440.png" alt="img" /></p>
 <p>请忽视我的灵魂画作…………<br />
 哈哈哈<br />
 好了，就先这样吧</p>
 <div class="note danger flat"><p>大家学习后，切勿使用到非法地方，本期内容仅供大家学习交流.</p>
-</div>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+</div>]]></content>
       <categories>
         <category>信息安全</category>
       </categories>
@@ -4105,8 +4099,8 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 <blockquote>
 <p>“检查到新版本x.x.x，当前版本是x.x.x，是否更新”</p>
 </blockquote>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-1/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BA/1554123924193.png" alt="PC软件提示更新" /></p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-1/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BA/1554124055043.png" alt="Android软件提示更新" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190513224352947-546110649.png" alt="PC软件提示更新" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190513224353077-56974472.png" alt="Android软件提示更新" /></p>
 <h2 id="流程是怎么样的"><a class="markdownIt-Anchor" href="#流程是怎么样的"></a> 流程是怎么样的</h2>
 <p>这种软件更新是怎么做到的呢？<br />
 咱不知道大公司是怎么想的<br />
@@ -4122,7 +4116,7 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 </blockquote>
 <h3 id="画个流程图看看"><a class="markdownIt-Anchor" href="#画个流程图看看"></a> 画个流程图看看</h3>
 <p>流程图如下：</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-1/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BA/1554124824427.png" alt="最最最简单的流程" /></p>
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190513224353038-599790685.png" alt="最最最简单的流程" /></p>
 <p>OK ，那么这个这么简单的流程咱们搞清楚了吗？</p>
 <h2 id="服务器得做什么好呢"><a class="markdownIt-Anchor" href="#服务器得做什么好呢"></a> 服务器得做什么好呢</h2>
 <h3 id="服务器的任务"><a class="markdownIt-Anchor" href="#服务器的任务"></a> 服务器的任务</h3>
@@ -4133,7 +4127,7 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
 3、在网络中任意一个位置都可以访问到，而不仅限于自己的那个路由器……</p>
 <p>所以，我们瞬间就可以想起了Python中自带的那个网络服务。。。但是，用过的人都知道它实在是太简单，难以胜任我们的这个需求啊。所以，这个时候，我们可以选用Flask这个小辣椒啦。什么？你不知道Flask是什么？</p>
 <h3 id="flask是个服务框架"><a class="markdownIt-Anchor" href="#flask是个服务框架"></a> Flask是个服务框架</h3>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-4-1/%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0%E6%9C%8D%E5%8A%A1%E4%B9%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%90%AD%E5%BB%BA/1554125477987.png" alt="就是这个火药筒" /><br />
+<p><img src="https://img2018.cnblogs.com/other/1621179/201905/1621179-20190513224353062-1484599631.png" alt="就是这个火药筒" /><br />
 简单普及一波：其实Flask那个图片不是辣椒啦，人家是装火药的啦<br />
 基于他，我们可以很容易地快速搭建好我们自己定义的服务。<br />
 再扯一下，单纯用这个框架简单地写个服务还是可以能应付一般点的并发量的。。。太大的并发量的话，就得采用其他策略去对付了。所以，我们现在讨论的是不考虑高并发情况的。</p>
@@ -4149,8 +4143,8 @@ check，没有参数，返回当前服务器版本号以及更新信息。</p>
 <h2 id="dont-bb-show-me-the-code"><a class="markdownIt-Anchor" href="#dont-bb-show-me-the-code"></a> Don’t BB , show me the code !</h2>
 <p>代码我直接就放上来吧。注释都有写作用的。</p>
 <h2 id="-code0-"><a class="markdownIt-Anchor" href="#-code0-"></a> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Time    : 4/1/2019 19:27</span></span><br><span class="line"><span class="comment"># @Author  : MARX·CBR</span></span><br><span class="line"><span class="comment"># @File    : __init__.py.py</span></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> request, jsonify, send_from_directory, abort, Flask</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">allfile = []</span><br><span class="line">md5_list = []</span><br><span class="line">updateList = &#123;&#125;</span><br><span class="line">directory = os.getcwd()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载文件服务</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/&lt;filename&gt;&quot;</span>, methods=[<span class="string">&#x27;GET&#x27;</span>]</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">download</span>(<span class="params">filename</span>):</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&quot;GET&quot;</span>:</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(os.path.join(<span class="string">&#x27;updateFiles&#x27;</span>, filename)):</span><br><span class="line">            <span class="keyword">return</span> send_from_directory(<span class="string">&#x27;updateFiles&#x27;</span>, filename, as_attachment=<span class="literal">True</span>)</span><br><span class="line">        abort(<span class="number">404</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算文件MD5</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Getfile_md5</span>(<span class="params">filename</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.isfile(filename):</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    myHash = hashlib.md5()</span><br><span class="line">    f = <span class="built_in">open</span>(filename, <span class="string">&#x27;rb&#x27;</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        b = f.read(<span class="number">8096</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> b:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        myHash.update(b)</span><br><span class="line">    f.close()</span><br><span class="line">    <span class="keyword">return</span> myHash.hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算生成新的清单文件</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/generateNewConfig&quot;</span>, methods=[<span class="string">&#x27;GET&#x27;</span>]</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate</span>():</span></span><br><span class="line">    findFile(directory + <span class="string">&#x27;/updateFiles/&#x27;</span>)</span><br><span class="line">    file_md5_list = json.dumps(updateList)</span><br><span class="line">    print(file_md5_list)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./updateFiles/listFile&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        pickle.dump(updateList, f)</span><br><span class="line">    return_data = &#123;</span><br><span class="line">        <span class="string">&#x27;Statu&#x27;</span>: <span class="string">&#x27;success&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> jsonify(return_data)</span><br><span class="line">    <span class="comment"># file_md5_list=json.load(updateList)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 找到更新文件目录里面的文件以及文件夹、递归寻找</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findFile</span>(<span class="params">path</span>):</span></span><br><span class="line">    fsinfo = os.listdir(path)</span><br><span class="line">    <span class="keyword">for</span> fn <span class="keyword">in</span> fsinfo:</span><br><span class="line">        temp_path = os.path.join(path, fn)</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> os.path.isdir(temp_path):</span><br><span class="line">            print(<span class="string">&#x27;文件路径: &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(temp_path))</span><br><span class="line">            fm = Getfile_md5(temp_path)</span><br><span class="line">            print(fn)</span><br><span class="line">            fn = temp_path.replace(directory + <span class="string">&quot;/updateFiles/&quot;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">            updateList[fn] = fm</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            findFile(temp_path)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查更新版本，该部分尚未够，完善。可以考虑为管理员远程上传文件的时候</span></span><br><span class="line"><span class="comment"># 将更新说明以json格式一同上传到服务器中，更新时直接读取即可</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/checkUpdate&quot;</span>, methods=[<span class="string">&#x27;GET&#x27;</span>]</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check</span>():</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&quot;GET&quot;</span>:</span><br><span class="line">        return_data = &#123;</span><br><span class="line">            <span class="string">&#x27;Version&#x27;</span>: <span class="string">&#x27;0.0.1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Msg&#x27;</span>: <span class="string">&#x27;更新文件，修复初始化卡顿bug\n增加文件预下载功能&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> jsonify(return_data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 首页Hello</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&quot;/&quot;</span>, methods=[<span class="string">&#x27;GET&#x27;</span>]</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span></span><br><span class="line">    <span class="keyword">if</span> request.method == <span class="string">&quot;GET&quot;</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Hello MARXCBR&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    app.run(host=<span class="string">&#x27;0.0.0.0&#x27;</span>, port=<span class="number">8080</span>)  <span class="comment"># 运行，指定监听地址为 0.0.0.0:8080</span></span><br><span class="line">																		   <span class="comment"># 服务器端运行可以让所有地方访问到</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></h2>
-<p>大概就这样吧，后续会给出软件更新服务之客户端怎么玩的文章。咱们试试从头到尾自己实现一个简单的软件更新服务，哈哈哈。</p>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+<p>大概就这样吧，后续会给出软件更新服务之客户端怎么玩的文章。咱们试试从头到尾自己实现一个简单的软件更新服务，哈哈哈</p>
+]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -4173,17 +4167,17 @@ check，没有参数，返回当前服务器版本号以及更新信息。</p>
 附送 <a href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0">下载链接</a></p>
 <h3 id="打开vmware安装包"><a class="markdownIt-Anchor" href="#打开vmware安装包"></a> 打开VMware安装包</h3>
 <p>OK ,软件已经下载好了，我就不下一次了，之前下载安装过了。漫长的下载后，接着就打开软件，VMware-workstation-14.exe<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070116107.png" alt="enter description here" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120306.png" alt="enter description here" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070116107.png" alt="img" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120306.png" alt="img" /></p>
 <p>一路Next下去，他会提示修改安装位置，在这里推荐修改一个位置比较好，可以安装在一个你自己喜欢的位置，默认安装在C盘，还是太伤我C盘的空间了。(C盘一个T空间的请忽略……)<br />
 在这里我安装到E盘，因为我E盘里面安装的都是编程IDE和开发环境。所以，大家根据自己的需求来装就好。<br />
 下面的那个选择框是说安装一个增强型键盘驱动程序，自己看情况选择。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120981.png" alt="enter description here" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120365.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120981.png" alt="img" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120365.png" alt="img" /></p>
 <p>一路Next，最后Install就可以完成安装了。再点击Finish就好了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120204.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120204.png" alt="img" /></p>
 <p>启动后，界面长这个样子。然后点击Help，再选择输入授权秘钥就OK了。在这里再提醒一次，尽量支持正版哈。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120021.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120021.png" alt="img" /></p>
 <p>到这里VMware的安装就完成了。接下来就是安装虚拟机了。</p>
 <h2 id="安装kali虚拟机"><a class="markdownIt-Anchor" href="#安装kali虚拟机"></a> 安装kali虚拟机</h2>
 <p>本教程以Kali Linux为例子，为大家安装一个 Kali Linux 操作系统。Ubuntu和centos和Windows系统的操作类似。Mac的稍有不同，需要改几个配置文件。有兴趣的可以自行查阅资料，我现在就不细说这个问题，后期可能会有一篇说明Mac虚拟机安装的文章吧~</p>
@@ -4194,64 +4188,64 @@ check，没有参数，返回当前服务器版本号以及更新信息。</p>
 <p>OK，咱们就挑最难的那种讲讲</p>
 <h3 id="第一种镜像安装"><a class="markdownIt-Anchor" href="#第一种镜像安装"></a> 第一种：镜像安装</h3>
 <p>下载kali的镜像，到官网下载页面 &gt;<a href="https://www.kali.org/downloads/">https://www.kali.org/downloads/</a><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120253.png" alt="enter description here" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120253.png" alt="img" /></p>
 <p>我们选择第三个，Kali Linux 64位的下载，中规中矩。用种子下载听说可以快一点哦。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120622.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120622.png" alt="img" /></p>
 <p>几分钟过后，镜像下载好了。我们便来到VMware，准备安装系统。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120725.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120725.png" alt="img" /></p>
 <p>接着进入引导页面，选择自定义高级安装</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120362.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120362.png" alt="img" /></p>
 <p>然后一路Next</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120586.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120586.png" alt="img" /></p>
 <p>然后，选择Linux，下面的版本选择debian 7.x 64-bit</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120256.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120256.png" alt="img" /></p>
 <p>选择安装位置，在起一个狂拽酷炫的名字就可以下一步了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120419.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070120419.png" alt="img" /></p>
 <p>接着选一下你希望你的虚拟机是几核几线程的选项</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121358.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121358.png" alt="img" /></p>
 <p>下一步便来到了选择虚拟机内存页面，建议内存都很低……所以我还是建议按照自己的PC来选择多大内存吧。太小的话，你用起来开，太大的话可能会出一些不可预料的错误。。。我在这里选择4G的内存分给他。因为我有12G内存，给他1/3,不过分不过分。。。<br />
 网络类型，有四个，桥接、NAT（ 网络地址转换）、主机模式、不联网。我这里默认用NAT就OK。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121927.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121927.png" alt="img" /></p>
 <p>下面的硬盘和控制模式就默认就可以了。。。一路next下去。<br />
 出现要你选择磁盘大小的时候，根据自己电脑情况自行判断选择。基于我1T的外置硬盘，我就分了50G空间给他。然后选择虚拟磁盘拆分就OK。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121097.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121097.png" alt="img" /></p>
 <p>接着到虚拟磁盘存储位置选择的时候，就选择之前的那个文件夹就好了</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121158.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121158.png" alt="img" /></p>
 <p>下一步点完成后，会来到首页，点击编辑虚拟机设置</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121448.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121448.png" alt="img" /></p>
 <p>来到设置页面后，选择CD/DVD项。再浏览刚才下载回来的iso镜像（PS：你想装什么系统就在这个时候选什么镜像）</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121364.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121364.png" alt="img" /></p>
 <p>OK保存后，便可以开机了。Power on 启动起来！！！<br />
 用键盘的↑、↓选择岛图形化安装选项，回车。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121739.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121739.png" alt="img" /></p>
 <p>然后选择安装语言，在这里建议大家选默认的English，多用英文可以有效提高英语水平哟，也可以避免踩一些中文的坑~~<br />
 回车后，叫你选区域，那就选Hong Kong咯。。。<br />
 然后就是选择键盘布局，有中国当然选中国呀。<br />
 回车后……便是一顿自动操作…………<br />
 终于停下来时i，叫你写hostname，用来在网络中分辨你的系统………以及下面那个域名，填自己喜欢的就好啦。<br />
 关键的是<strong>设置密码</strong>啦，后面都是要用的，大家设置后<strong>千万要记住</strong>哟，怕写错的，可以勾下面的显示密码来确认一下下</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121771.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121771.png" alt="img" /></p>
 <p>接着一路continue，在分区的时候，要将NO改成YES。如下即可</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121197.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121197.png" alt="img" /></p>
 <p>然后就不用操作了，一个钟半个钟后便安装完毕了。。。（安装在SSD的同学请忽略……）<br />
 后面的包管理选择、引导之类的（<strong>注意GRUB是要安装到/dev/sda这个设备上别顺手就点过去了哦……会扑街的</strong>），其他的相信大家都可以看懂然后默认继续就好了。<br />
 这里还是再提醒多一下吧</p>
 <div class="note info flat"><p>注意GRUB是要安装到/dev/sda这个设备上别顺手就点过去了哦</p>
 </div>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121762.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121762.png" alt="img" /></p>
 <p>当你看到这个页面的时候，你已经成功98%了。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121653.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121653.png" alt="img" /></p>
 <p>重启虚拟机系统后你就可以看到这帅的爆的kali Linux啦</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121482.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070121482.png" alt="img" /></p>
 <h3 id="第二第三种文件安装"><a class="markdownIt-Anchor" href="#第二第三种文件安装"></a> 第二第三种：文件安装</h3>
 <p>第二第三种很像，我就并在一起讲了。关键是拿到那个打包好的系统文件夹。<br />
 OK ，这里我有一个从别人主机上面拖过来的系统，解压后就进入VMware的首页</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122928.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122928.png" alt="img" /></p>
 <p>然后选择刚才解压出来的文件夹。这里我选择Ubuntu9的这个文件夹。</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122788.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122788.png" alt="img" /></p>
 <p>点击Open便会自动加载进左边的主机列表啦。<br />
 然后开机，你就可以看到系统了。（很多同学都没见过Ubuntu9的样子吧，哈哈哈~~~）</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122842.png" alt="enter description here" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301070122842.png" alt="img" /></p>
 <h2 id="结语"><a class="markdownIt-Anchor" href="#结语"></a> 结语</h2>
 <p>本篇不完全指北的关键不在于系统安装的步骤。因为每个系统安装的步骤都是一个样。用物理机来说，把光盘或者刻录好镜像的U盘怼进去后，开机按Esc或者F9之类的，选择启动的方式就可以进入安装系统的引导界面了。按照里面的安装提示选择自己的选项就好了。<br />
 在这里吐槽一句，WIN10的安装，如果它安装在MBR磁盘上，你不格式化磁盘转成GPT格式的话，会给你甩一句“无法在驱动器0分区上安装windows”的问题，这个问题，改天写一篇短文简单说明一下该怎么解决吧</p>
@@ -4268,43 +4262,36 @@ OK ，这里我有一个从别人主机上面拖过来的系统，解压后就�
   <entry>
     <title>QQ音乐MP3下载</title>
     <url>/archives/28d613bd.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553837004446.png" alt="" /></p>
-<center>没错本次写的内容的对象是我们熟知的QQ Music。</center><br/>
-<p>本篇文章涉及内容包括：Python，爬虫，json解析，request 库的使用<br/></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071552558.png" alt="img" /></p>
 <h2 id="缘起"><a class="markdownIt-Anchor" href="#缘起"></a> 缘起</h2>
 <p>前几天刷B站无意中又刷到了一首神曲，“I Want My Tears Back”，挺好听的。听了几遍后便寻思着能不能把这歌给下到手机上拿来当闹钟的，听过的同学应该知道这歌有多提神，哈哈哈~~~<br />
 没听过的同学可以点击文章上方的音乐，感受一下下。</p>
 <h2 id="动手分析"><a class="markdownIt-Anchor" href="#动手分析"></a> 动手分析</h2>
 <p>接下来，当然要选择一下从哪个平台下搞这首歌回来啦。网易云音乐和QQ音乐，选择哪个？那就从网易云入手吧，毕竟用的多些，接着便去网易云一顿操作，此处省略1000字描述。发现，哎呦，这网易云……不好搞呀。所以先不管了，看一下QQ音乐的情况先。<br />
 F12大法一开，QQ音乐就先给我来了个惊喜，大大符号图标倾情相送。对比云村的就没有啦。<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553838437967.png" alt="" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071553768.png" alt="img" /><br />
 撇开这些不关键的东西不说了，接下来就是搜索一首歌。</p>
 <p>这个时候，先把控制台切到network栏，这个时候，你会发现左下角有很多请求链接。请求各种各样的内容，这个时候，这些东西对我们都是没用的，是吧。我们要的是我们请求搜索那一瞬间他发出去的数据。所以，为了避免无关数据的干扰，建议点击左上角的清空把记录清空先。然后右上角勾上disable cache，避免缓存使我们看不到我们要的数据。<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553838797742.png" alt="" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071553692.png" alt="img" /><br />
 ok，这个时候我们输入我们要查的歌，I Want My Tears Back。我们已经可以看到有东西已经发出去并返回回来了。就是这个链接<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553839050029.png" alt="" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071553165.png" alt="img" /></p>
 <blockquote>
 <p><a href="https://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg?is_xml=0&amp;key=I%20Want%20My%20Tears%20Back&amp;g_tk=1419336673&amp;loginUin=824368xxx&amp;hostUin=0&amp;format=json&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq.json&amp;needNewCode=0">https://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg?is_xml=0&amp;key=I Want My Tears Back&amp;g_tk=1419336673&amp;loginUin=824368xxx&amp;hostUin=0&amp;format=json&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq.json&amp;needNewCode=0</a></p>
 </blockquote>
 <p>我们观察一下，这里面的参数，key就有I Want My Tears Back这个歌名了，再看一下返回数据。是一个json数据，有很多内，我们可以很容易看出了数据包含了 专辑、mv、歌手、歌曲 这四大区域。我们关注歌曲这个栏，在count 中已经表明找到了两首符合度最高的歌曲。一首是Nightwish的一首是Hok-key的。因为我想要的就是 夜愿 这个版本的，所以我们就默认第一首出现的就是我们要下的歌曲哈。<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553839289035.png" alt="" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071553049.png" alt="img" /><br />
 这个时候，拿到这些数据有什么用呢？歌曲链接还没不知道怎么构造呀。。。<br />
 先别急，我们看看歌曲链接长啥样。然后…………<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553839647380.png" alt="" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071553080.png" alt="img" /><br />
 好尴尬呀，有木有，这，这谁忍得住呀？所以，机智的我打开了另外一首歌……<br />
 瞬间右边记录出来了一大堆，没错是一大堆东西……但是，控制台有分类呀，不怂。选择media分类，就给我们过滤出了那几个链接。<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553840243529.png" alt="" /><br />
-<br/>没办法了，逐个点击。1分钟过后，I got it.最后那个链接就是歌曲链接。</p>
-<blockquote>
-<p><a href="https://isure.stream.qqmusic.qq.com/C400000JHuWh4fOBxD.m4a?guid=8665097290&amp;vkey=A78C373DCB421D9DA3B1C3A87979A32A6062159F032C2D44C83BDD8D9D1F717B429F6C92A6C2720A1DB18AC835D4E6FCD409D6F0D0CE6F21&amp;uin=7642&amp;fromtag=66">https://isure.stream.qqmusic.qq.com/C400000JHuWh4fOBxD.m4a?guid=8665097290&amp;vkey=A78C373DCB421D9DA3B1C3A87979A32A6062159F032C2D44C83BDD8D9D1F717B429F6C92A6C2720A1DB18AC835D4E6FCD409D6F0D0CE6F21&amp;uin=7642&amp;fromtag=66</a></p>
-</blockquote>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071554361.png" alt="img" />没办法了，逐个点击。1分钟过后，I got it.最后那个链接就是歌曲链接。<br />
+<a href="https://isure.stream.qqmusic.qq.com/C400000JHuWh4fOBxD.m4a?guid=8665097290&amp;vkey=A78C373DCB421D9DA3B1C3A87979A32A6062159F032C2D44C83BDD8D9D1F717B429F6C92A6C2720A1DB18AC835D4E6FCD409D6F0D0CE6F21&amp;uin=7642&amp;fromtag=66">https://isure.stream.qqmusic.qq.com/C400000JHuWh4fOBxD.m4a?guid=8665097290&amp;vkey=A78C373DCB421D9DA3B1C3A87979A32A6062159F032C2D44C83BDD8D9D1F717B429F6C92A6C2720A1DB18AC835D4E6FCD409D6F0D0CE6F21&amp;uin=7642&amp;fromtag=66</a></p>
 <p>可以清楚看到有几个关键参数。guid、vkey、uin、fromtag，我们先暂且不管那个参数可以省略好吧。先看看可以从哪里找到这几个参数……又得看链接的返回值了（此处说明，可以在控制台点击response标签查看返回值，你只要按↓键就OK了）。在漫长的遍历过程中，我注意到了一个链接的内容十分不一样的，不相同的，很多很多。直觉告诉我，就是这个链接了。<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553840766388.png" alt="" /><br />
-<br />拿去做一下URL解码后，咋一看一头雾水。不信你看一下下？<br /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071554755.png" alt="img" />拿去做一下URL解码后，咋一看一头雾水。不信你看一下下？</p>
 <p>接合歌曲链接，这个请求链接，搜索请求结果，这三个内容。其实不难发现，songmid 这个参数是关键。<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553841536865.png" alt="" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553840915649.png" alt="" /></p>
-<p><br/>所以，我们这个时候基本就以及厘清下载音乐的步骤以及思路了。首先，请求搜索某一首歌，然后或者到song mid 接着song mid 去请求服务器拿到这首歌的播放链接。接着用request请求数据回来再用二进制保存就OK啦。</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071554784.png" alt="img" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071554367.png" alt="img" />所以，我们这个时候基本就以及厘清下载音乐的步骤以及思路了。首先，请求搜索某一首歌，然后或者到song mid 接着song mid 去请求服务器拿到这首歌的播放链接。接着用request请求数据回来再用二进制保存就OK啦。</p>
 <h2 id="代码写起来"><a class="markdownIt-Anchor" href="#代码写起来"></a> 代码写起来</h2>
 <p>导入需要用到的json库和requests库。</p>
 <p>构造一个类，downloadMusic，初始化一个headers，做个最简单的反爬。<br />
@@ -4313,10 +4300,7 @@ ok，这个时候我们输入我们要查的歌，I Want My Tears Back。我们�
 简单来说，content拿到的数据是字节，调试打印出来你会发现数据前面会有个b’，text的话，就是一个字符串了。<br />
 因为我们要保存歌曲，就肯定要用字节保存好，用wb方式打开，然后写进去后便关闭即可。代码贴在下面。<br />
 至此写完收工，可以美滋滋地下载我们要的歌了。有了它还怕什么铃声找不到自己喜欢的问题吗？<br/></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Time    : 10/10/2018 9:31 PM</span></span><br><span class="line"><span class="comment"># @Author  : MARX·CBR</span></span><br><span class="line"><span class="comment"># @File    : __init__.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">downloadMusic</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.headers = &#123;</span><br><span class="line">            <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Accept-Encoding&#x27;</span>: <span class="string">&#x27;gzip, deflate&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Upgrade-Insecure-Requests&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        self.name=<span class="string">&#x27;I Want My Tears Back&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self,sn</span>):</span></span><br><span class="line">        self.name=sn</span><br><span class="line">        session=requests.session()</span><br><span class="line">        firstjsonurl=<span class="string">&#x27;https://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg?is_xml=0&amp;format=jsonp&amp;key=&#123;&#125;&amp;g_tk=5381&amp;jsonpCallback=SmartboxKeysCallbackmod_top_search1467&amp;loginUin=0&amp;hostUin=0&amp;format=jsonp&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq&amp;needNewCode=0&#x27;</span>.<span class="built_in">format</span>(self.name)</span><br><span class="line">        r=session.get(firstjsonurl).text</span><br><span class="line">        print(<span class="built_in">type</span>(r))</span><br><span class="line">        print(r[<span class="number">39</span>:-<span class="number">1</span>:])</span><br><span class="line">        myjson=json.loads(r[<span class="number">39</span>:-<span class="number">1</span>:])</span><br><span class="line">        mid=myjson[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;song&#x27;</span>][<span class="string">&#x27;itemlist&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;mid&#x27;</span>]</span><br><span class="line">        print(mid)</span><br><span class="line">        searchurl=<span class="string">&#x27;&#x27;&#x27;https://u.y.qq.com/cgi-bin/musicu.fcg?callback=getplaysongvkey2236996910208997&amp;g_tk=5381&amp;jsonpCallback=getplaysongvkey2236996910208997&amp;loginUin=0&amp;hostUin=0&amp;format=jsonp&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq&amp;needNewCode=0&amp;data=&#123;&quot;req&quot;:&#123;&quot;module&quot;:&quot;CDN.SrfCdnDispatchServer&quot;,&quot;method&quot;:&quot;GetCdnDispatch&quot;,&quot;param&quot;:&#123;&quot;guid&quot;:&quot;8665097290&quot;,&quot;calltype&quot;:0,&quot;userip&quot;:&quot;&quot;&#125;&#125;,&quot;req_0&quot;:&#123;&quot;module&quot;:&quot;vkey.GetVkeyServer&quot;,&quot;method&quot;:&quot;CgiGetVkey&quot;,&quot;param&quot;:&#123;&quot;guid&quot;:&quot;8665097290&quot;,&quot;songmid&quot;:[&quot;&#x27;&#x27;&#x27;</span>+mid+<span class="string">&#x27;&#x27;&#x27;&quot;],&quot;songtype&quot;:[0],&quot;uin&quot;:&quot;0&quot;,&quot;loginflag&quot;:1,&quot;platform&quot;:&quot;20&quot;&#125;&#125;,&quot;comm&quot;:&#123;&quot;uin&quot;:0,&quot;format&quot;:&quot;json&quot;,&quot;ct&quot;:20,&quot;cv&quot;:0&#125;&#125;&#x27;&#x27;&#x27;</span></span><br><span class="line">        r=session.get(searchurl).text</span><br><span class="line">        print(r)</span><br><span class="line">        songjson=json.loads(r[<span class="number">32</span>:-<span class="number">1</span>:])</span><br><span class="line">        print(songjson)</span><br><span class="line">        header=songjson[<span class="string">&#x27;req_0&#x27;</span>][<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;sip&#x27;</span>][<span class="number">0</span>]</span><br><span class="line">        two=songjson[<span class="string">&#x27;req_0&#x27;</span>][<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;midurlinfo&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;purl&#x27;</span>]</span><br><span class="line">        songurl=header+two</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;&#123;&#125;.mp3&quot;</span>.<span class="built_in">format</span>(self.name),<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> ms:</span><br><span class="line">            print(songurl)</span><br><span class="line">            raw = session.get(songurl, headers=self.headers)</span><br><span class="line">            content=raw.content</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(content) &gt;<span class="number">500</span>:</span><br><span class="line">                ms.write(content)</span><br><span class="line">                print(<span class="string">&quot;下载成功&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">&quot;下载失败&quot;</span>)</span><br><span class="line"></span><br><span class="line">App=downloadMusic()</span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    songName=<span class="built_in">input</span>(<span class="string">&quot;请输入歌曲名字&quot;</span>)</span><br><span class="line">    App.run(songName)</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-29/QQ%E9%9F%B3%E4%B9%90MP3%E4%B8%8B%E8%BD%BD/1553846610023.png" alt="" /></p>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Time    : 10/10/2018 9:31 PM</span></span><br><span class="line"><span class="comment"># @Author  : MARX·CBR</span></span><br><span class="line"><span class="comment"># @File    : __init__.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">downloadMusic</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.headers = &#123;</span><br><span class="line">            <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Accept-Encoding&#x27;</span>: <span class="string">&#x27;gzip, deflate&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;Upgrade-Insecure-Requests&#x27;</span>: <span class="string">&#x27;1&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        self.name=<span class="string">&#x27;I Want My Tears Back&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self,sn</span>):</span></span><br><span class="line">        self.name=sn</span><br><span class="line">        session=requests.session()</span><br><span class="line">        firstjsonurl=<span class="string">&#x27;https://c.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg?is_xml=0&amp;format=jsonp&amp;key=&#123;&#125;&amp;g_tk=5381&amp;jsonpCallback=SmartboxKeysCallbackmod_top_search1467&amp;loginUin=0&amp;hostUin=0&amp;format=jsonp&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq&amp;needNewCode=0&#x27;</span>.<span class="built_in">format</span>(self.name)</span><br><span class="line">        r=session.get(firstjsonurl).text</span><br><span class="line">        print(<span class="built_in">type</span>(r))</span><br><span class="line">        print(r[<span class="number">39</span>:-<span class="number">1</span>:])</span><br><span class="line">        myjson=json.loads(r[<span class="number">39</span>:-<span class="number">1</span>:])</span><br><span class="line">        mid=myjson[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;song&#x27;</span>][<span class="string">&#x27;itemlist&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;mid&#x27;</span>]</span><br><span class="line">        print(mid)</span><br><span class="line">        searchurl=<span class="string">&#x27;&#x27;&#x27;https://u.y.qq.com/cgi-bin/musicu.fcg?callback=getplaysongvkey2236996910208997&amp;g_tk=5381&amp;jsonpCallback=getplaysongvkey2236996910208997&amp;loginUin=0&amp;hostUin=0&amp;format=jsonp&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq&amp;needNewCode=0&amp;data=&#123;&quot;req&quot;:&#123;&quot;module&quot;:&quot;CDN.SrfCdnDispatchServer&quot;,&quot;method&quot;:&quot;GetCdnDispatch&quot;,&quot;param&quot;:&#123;&quot;guid&quot;:&quot;8665097290&quot;,&quot;calltype&quot;:0,&quot;userip&quot;:&quot;&quot;&#125;&#125;,&quot;req_0&quot;:&#123;&quot;module&quot;:&quot;vkey.GetVkeyServer&quot;,&quot;method&quot;:&quot;CgiGetVkey&quot;,&quot;param&quot;:&#123;&quot;guid&quot;:&quot;8665097290&quot;,&quot;songmid&quot;:[&quot;&#x27;&#x27;&#x27;</span>+mid+<span class="string">&#x27;&#x27;&#x27;&quot;],&quot;songtype&quot;:[0],&quot;uin&quot;:&quot;0&quot;,&quot;loginflag&quot;:1,&quot;platform&quot;:&quot;20&quot;&#125;&#125;,&quot;comm&quot;:&#123;&quot;uin&quot;:0,&quot;format&quot;:&quot;json&quot;,&quot;ct&quot;:20,&quot;cv&quot;:0&#125;&#125;&#x27;&#x27;&#x27;</span></span><br><span class="line">        r=session.get(searchurl).text</span><br><span class="line">        print(r)</span><br><span class="line">        songjson=json.loads(r[<span class="number">32</span>:-<span class="number">1</span>:])</span><br><span class="line">        print(songjson)</span><br><span class="line">        header=songjson[<span class="string">&#x27;req_0&#x27;</span>][<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;sip&#x27;</span>][<span class="number">0</span>]</span><br><span class="line">        two=songjson[<span class="string">&#x27;req_0&#x27;</span>][<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;midurlinfo&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;purl&#x27;</span>]</span><br><span class="line">        songurl=header+two</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;&#123;&#125;.mp3&quot;</span>.<span class="built_in">format</span>(self.name),<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> ms:</span><br><span class="line">            print(songurl)</span><br><span class="line">            raw = session.get(songurl, headers=self.headers)</span><br><span class="line">            content=raw.content</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(content) &gt;<span class="number">500</span>:</span><br><span class="line">                ms.write(content)</span><br><span class="line">                print(<span class="string">&quot;下载成功&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">&quot;下载失败&quot;</span>)</span><br><span class="line"></span><br><span class="line">App=downloadMusic()</span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    songName=<span class="built_in">input</span>(<span class="string">&quot;请输入歌曲名字&quot;</span>)</span><br><span class="line">    App.run(songName)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>爬虫</category>
       </categories>
@@ -4380,7 +4364,7 @@ site指令主要用来查询一个域名下的网站在搜索引擎中被检索�
 <blockquote>
 <p>site:freebuf.com</p>
 </blockquote>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554024596846.png" alt="MarxCBR的小屋" /><br />
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071600799.png" alt="img" /><br />
 可以明显看到搜索出来的内容都是这个网站的内容</p>
 <h3 id="intitle"><a class="markdownIt-Anchor" href="#intitle"></a> intitle</h3>
 <p>用法&gt;&gt; intitle:xxx<br />
@@ -4389,7 +4373,7 @@ intitle看起来也比较直白，这个指令告诉了搜索引擎，搜索出�
 <blockquote>
 <p>intitle:入侵防护</p>
 </blockquote>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554025084648.png" alt="MarxCBR的小屋" /><br />
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071600492.png" alt="img" /><br />
 可以明显看到搜索出来的内容标题都是包含了我们输入的关键词的</p>
 <h3 id="双引号"><a class="markdownIt-Anchor" href="#双引号"></a> “”（双引号)</h3>
 <p>用法&gt;&gt; “xxx”<br />
@@ -4398,7 +4382,7 @@ intitle看起来也比较直白，这个指令告诉了搜索引擎，搜索出�
 <blockquote>
 <p>“自由，平等，公正”</p>
 </blockquote>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554025323413.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071600575.png" alt="img" /></p>
 <h3 id="-减号"><a class="markdownIt-Anchor" href="#-减号"></a> - （减号）</h3>
 <p>用法&gt;&gt; xxx -xxx<br />
 这个指令代表搜索含有前面那个关键词但是又不包含减号后面的词的页面。<br />
@@ -4406,8 +4390,8 @@ intitle看起来也比较直白，这个指令告诉了搜索引擎，搜索出�
 <blockquote>
 <p>内存条 -金士顿<br />
 内存条 -广告<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554025818608.png" alt="MarxCBR的小屋" /><br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554025870168.png" alt="MarxCBR的小屋" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071600039.png" alt="img" /><br />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071600606.png" alt="img" /></p>
 </blockquote>
 <p>看到木有，减号可以去广告啊，使用百度的同学，你还不用吗？</p>
 <h3 id="加号"><a class="markdownIt-Anchor" href="#加号"></a> +（加号)</h3>
@@ -4417,7 +4401,7 @@ intitle看起来也比较直白，这个指令告诉了搜索引擎，搜索出�
 <blockquote>
 <p>入侵检测 +snort</p>
 </blockquote>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554026150380.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071600208.png" alt="img" /></p>
 <h3 id="filetype"><a class="markdownIt-Anchor" href="#filetype"></a> filetype</h3>
 <p>用法&gt;&gt; filetype:xxx xxx<br />
 这个指令是让搜索引擎返回的结果是只显示关键词为某类文件格式的链接<br />
@@ -4425,20 +4409,20 @@ intitle看起来也比较直白，这个指令告诉了搜索引擎，搜索出�
 <blockquote>
 <p>filetype:pdf 没事别随便思考人生</p>
 </blockquote>
-<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554027012539.png" alt="MarxCBR的小屋" /></p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071559818.png" alt="img" /></p>
 <h3 id="inurl"><a class="markdownIt-Anchor" href="#inurl"></a> inurl</h3>
 <p>用法&gt;&gt; inurl:xxx<br />
 这个指令是让搜索引擎搜索域名链接中，包含有关键词的链接页面<br />
 下面给出两个例子：</p>
 <blockquote>
 <p>inurl:admin<br />
-<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/MARXCBR/2019-3-31/%E6%8C%87%E5%8C%97%E7%B3%BB%E5%88%97%EF%BC%9A/1554033597727.png" alt="MarxCBR的小屋" /></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202301071559744.png" alt="img" /></p>
 </blockquote>
 <h3 id="用空格隔开关键字"><a class="markdownIt-Anchor" href="#用空格隔开关键字"></a> 用空格隔开关键字</h3>
 <p>这个也是一个技巧，但是展示出来对比度不高就不展示区别了。</p>
 <h3 id="结语"><a class="markdownIt-Anchor" href="#结语"></a> 结语</h3>
 <p>常用的那几条搜索指令就是这么多了，但是足以应付我们日常快速搜索资料的需求了。还可以去去广告、推荐什么的。靠着强大的搜索引擎，简单的输入一些关键字，我们可以快速的获取海量的信息，但是对于我们搜索资料的人来说，哪些是有用的，哪些是没用的，哪些是优质的，实在是难以快速定度。但是利用好这些搜索命令，不就可以更加快速准确找到我们想要的资料了嘛。</p>
-<center>要是感觉不错的话，就留个言评论一下下呀，欢迎各位大哥指正</center>]]></content>
+]]></content>
       <categories>
         <category>实用技巧</category>
       </categories>
