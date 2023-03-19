@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Legion的学习与理解</title>
+    <url>/archives/5d14babc.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="legion的学习与理解"><a class="markdownIt-Anchor" href="#legion的学习与理解"></a> Legion的学习与理解</h2>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202303191657282.png" alt="image-20230319165727583" /></p>
+<h3 id="legion是什么"><a class="markdownIt-Anchor" href="#legion是什么"></a> Legion是什么</h3>
+<p><a href="https://legion.stanford.edu/">Legion Programming System (stanford.edu)</a></p>
+<blockquote>
+<p>Legion is a data-centric parallel programming system for writing portable high performance programs targeted at distributed heterogeneous architectures. Legion presents abstractions which allow programmers to describe properties of program data (e.g. independence, locality). By making the Legion programming system aware of the structure of program data, it can automate many of the tedious tasks programmers currently face, including correctly extracting task- and data-level parallelism and moving data around complex memory hierarchies. A novel mapping interface provides explicit programmer controlled placement of data in the memory hierarchy and assignment of tasks to processors in a way that is orthogonal to correctness, thereby enabling easy porting and tuning of Legion applications to new architectures.</p>
+<p>–引用自官方描述</p>
+</blockquote>
+<h3 id="传统-data-movement"><a class="markdownIt-Anchor" href="#传统-data-movement"></a> 传统 Data Movement</h3>
+<blockquote>
+<p>To target accelerators most programmers use either CUDA [4] or OpenCL [36]. Both CUDA and OpenCL provide the necessary primitives for copying data between the various memories (e.g. framebuffer and system memory) as well as the ability to execute kernels on the accelerator cores. While these languages are sufficient for programming accelerators, they place a significant burden on the programmer. Programmers are responsible for issuing the explicit (asynchronous) data movement commands and then properly synchronizing these data movements with computation using either streams in CUDA or events in OpenCL. Much like MPI, this again places the burden of overlapping computation with data movement on the programmer and also makes it easy to introduce complex synchronization bugs. Furthermore, the data movement operations for CUDA and OpenCL do not compose with the operations in MPI, commonly requiring the data first be moved to a node with an MPI communication primitive and then later moved again with a CUDA or OpenCL call. Synchronizing between all of these different operations because of interface incompatibility adds latency and increases code complexity.</p>
+<p>从上述文字描述中，Data Movement其实定义特别简单，就是内存之间复制数据的一个行为<br />
+且CUDA与OpenCL的数据移动与MPI操作并不是很流畅，增加了复杂度与延时</p>
+</blockquote>
+<h3 id="legion的data-movement"><a class="markdownIt-Anchor" href="#legion的data-movement"></a> Legion的Data Movement</h3>
+<blockquote>
+<p>Motivation<br />
+Our motivation in designing Legion is not simply to fix the problems of current programming systems outlined in the previous section, but rather to construct a system that meets the needs of programmers for both modern and future supercomputing architectures. To meet this constraint, the design of Legion is based on three important and noticeable trends in supercomputing that forecast the future of the field: the increasing cost of data movement relative to the cost of computation, the increasing amount of dynamism in both hardware and software, and the growing prevalence of heterogeneity of both processors and memories. We now discuss each of these trends in turn.</p>
+<p>为了应对软硬件动态性日益增加与处理器内存的异构性愈发增加以及数据移动成本相对于计算成本的增加。Legion特地设计了一套数据移动的机制</p>
+</blockquote>
+<blockquote>
+<p>In addition to allowing parent tasks to launch sub-tasks, the Legion programming model also allows parent tasks to issue other kinds of operations. Some of these operations function primarily as productivity features, while others are also useful forachieving high performance. For example, inline mapping operations are mainly a productivity operation because they allow applications to immediately gain access to a physical instance of a logical region after the region has been created. Alternatively, explicit region-to-region copies are valuable for performance as they allow applications to explicitly describe data movement between regions while allowing the runtime to optimize the implementation of these data transfers.</p>
+<p>内置的Mapping操作可以让程序创建Region后立即访问物理实例，显式指定region直接的复制时，可以让runtime优化这些数据传输的实现。</p>
+</blockquote>
+<blockquote>
+<p>While the high-level runtime is responsible for the construction of the DAG of operations, the low-level runtime is responsible for scheduling the operations onto the target hardware while abiding by the constraints specified by event dependences. It is important to note that many of the DAGs computed for real applications contain significant amounts of parallelism. For example, in Figure 3.2, the graph is very tall, indicating that there are many operations that can be done in parallel as event dependences primarily point from left to right. By exposing all of this parallelism in the DAG, the low-level runtime can discover significant amounts of work that can be used to overlap long latency events such as data movement and synchronization. Most importantly all of this parallelism is extracted automatically by the Legion high-level runtime without requiring any assistance from the programmer. This is only possible because Legion knows which logical regions different tasks will be accessing and can therefore safely infer when tasks and other operations can be executed in parallel. In contrast, the burden of hiding long latency operations in MPI by overlapping computation and communication is placed directly on the programmer (see Chapter 1).</p>
+<p>高层runtime构建DAG以分析程序中的并行性，在底层runtime中，则可以发现可以利用数据移动与同步的计算重叠工作</p>
+</blockquote>
+<blockquote>
+<p>Once a task has all of its dependences satisfied (because all of its dependences have mapped), a task progresses to the mapping phase of the pipeline. The mapping phase is composed of two tightly coupled stages that are interchangeable depending on decisions made by the mapper for a task. The ordering of the mapping and distribution stages is determined by whether the mapper wants to map the task on the node where the task will run, which we call remote mapping, or map on the node where the task originated, which we call local mapping. When a task is remotely mapped, it is first sent to the target node during the distribution stage along with its meta-data and then it is mapped during the mapping stage onto the target processor. In the case where a task is locally mapped, it is mapped on the origin node and then sent to the target node to be executed. There is an obvious trade-off to be made by mappers here: mapping remotely permits more tasks to be mapped in parallel on different nodes, but requires movement of meta-data, while locally mapping a task does not require meta-data movement, but serializes some task mappings. We discuss this trade-off in more detail in Chapter 8</p>
+<p>满足依赖分析的task就会被塞到pipeline中，根据mapper来映射和分发任务，以决定是否分发到远程服务器中，其中远程服务器的分发需要将元数据一起跟发送过去</p>
+</blockquote>
+<blockquote>
+<p>After tasks have completed the logical dependence analysis stage of the Legion task pipeline, they then proceed to the mapping stage of the pipeline (see Chapter 3). The process of mapping entails selecting a processor on which to execute each task and then determining memories in which to place physical instances for each of the logical regions on which the task has requested privileges. It is the responsibility of the runtime to compute all of the data movement operations and preconditions necessary for actually executing a task in accordance with the requested logical region privileges and coherence. We refer to this process as physical dependence analysis as it involves actually computing the operations necessary for mapping a Legion application onto real hardware. To ensure that dependences and data movement operations are determined correctly, a task T is only allowed to map when all of the other tasks in the dynamic dependence graph on which T has a dependence have mapped. This invariant guarantees that when a task T maps, it will see the correct version of the meta-data stored in the physical state of the region tree forest and pick up any necessary dependences on other tasks and operations that came before T in program order. An important property of this invariant is that it permits Legion to map some tasks while logical dependence analysis is being performed on other tasks. It is impossible for task T to record a mapping dependence on any task that comes after it in program order. This property allows Legion to execute these stages of the pipeline in parallel for different tasks, aiding in the latency hiding of the dynamic analysis.</p>
+<p>完成逻辑依赖分析后就准备到流水线的映射阶段去选择task的处理器，runtime去保证数据移动，当task T与其所有相关依赖性的task都被映射后，才可以对taskT进行映射。这个操作提供了runtime动态分析延迟处理的基础保证。</p>
+</blockquote>
+<blockquote>
+<p>It is important to note that after the mapping traversal is complete, we do not actually issue any data movement operations for updating physical instances. Instead this is done in the third traversal when we register the physical instances (see Section 5.1.3). The reason for this discrepancy is that in some cases, we may only discover that a mapping has failed after we have completed the mapping traversal for several other region requirements. In these circumstance, we need to free any physical instances that we have created as part of the mapping traversal in order to avoid resource deadlock. Rolling back these allocations would be complicated if we had already issued copy operations to bring the instances up-to-date. Therefore, we defer issuing any of these operations until we know for sure that the mapping will be successful for all region requirements that a task requested.</p>
+<p>遍历完映射后，不会产生真正的物理实例的数据移动。</p>
+</blockquote>
+<blockquote>
+<p>The priority that is assigned to a task applies to both the execution of the task as well as any mapping operations that are generated as part of mapping the task. This ensures that data movement that may reside on a critical path is also prioritized</p>
+<p>优先级分配也会在映射的task中生效，其中关键路径的数据移动会被优先处理</p>
+</blockquote>
+<p>所以说，data movement的定义其实并未变化，总的来说，就是内存之间的一个数据复制成本。</p>
+<h3 id="流水线"><a class="markdownIt-Anchor" href="#流水线"></a> 流水线</h3>
+<blockquote>
+<p>Our circuit simulation exemplifies the benefits that can be obtained from deferred execution. Since all task launch operations are performed asynchronously, the execution of the the loops on lines 32-36 of Listing 2.1 can be unrolled arbitrarily far, allowing the Legion runtime to see a large window of potential tasks to run. As we will see in later chapters, the deferred execution model will allow a Legion implementation to pipeline many of the operations associated with executing a task and thereby hide the latency both of dynamic program analysis and communication between nodes.</p>
+<p>流水线的实现依靠 deferred execution model来完成，进而隐藏动态的程序分析和节点通信的延时</p>
+</blockquote>
+<blockquote>
+<p>3.2.1 Out-of-Order Pipeline Analogy<br />
+The dynamic nature of the Legion runtime requires efficiency in the analysis of a stream of tasks because this analysis is overhead that detracts from the performance of an application. In order to hide runtime overhead and extract parallelism from a stream of tasks, Legion borrows the idea of an out-of-order pipeline from hardware architectures and adapts it for use within a distributed software environment. For several decades, hardware designers have relied on out-of-order instruction pipelines to both extract instruction level parallelism from programs and hide the overheads associated with dynamic instruction analysis. Legion applies this abstraction at the coarser granularity of tasks. The stream of sub-tasks with region requirements is analogous to the stream of instructions with register names that hardware processors execute. Our implementation of the Legion runtime exploits this analogy extensively to both implicitly extract parallelism from a stream of tasks and to hide the overheads associated with dynamic runtime analysis. Many of the stages of the Legion task execution pipeline described in Section 3.2.2 share obvious analogs to pipeline stages in traditional out-of-order hardware processors. The crucial insight that enables this analogy is that logical regions provide the necessary information for describing the data accessed by tasks. As we discuss in Chapter 12, logical regions differentiate the Legion runtime from many of the other parallel task pipeline systems.</p>
+<p>引入乱序流水线分析，其中logical regions是一个关键因素，它提供了task访问的数据必要信息</p>
+</blockquote>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202303191431000.png" alt="image-20230319143130616" /></p>
+<blockquote>
+<p>3.2.2 Legion Pipeline Stages<br />
+Figure 3.4 shows the different stages of the Legion runtime task pipeline2 . Each task progresses through the stages of the pipeline in order. However, the Legion runtime is free to re-order tasks with respect to each other if tasks are determined to be non-interfering. We briefly introduce each of the different pipeline stages and where possible describe analogies to similar stages in hardware out-of-order processors. The details of many of these stages will be the subject of later chapters of this thesis. The first stage in the Legion task pipeline is dependence analysis. This stage determines which tasks are safe to run in parallel and which tasks have dependences based on logical region usage. Dependence analysis is computed with respect to the sequential order in which tasks are issued to the runtime. We refer to this initial order of tasks as program order. Dependences always proceed from tasks coming earlier in program order to tasks coming later in program order. The natural partial order on dependences ensures that deadlock cannot result from the dependence analysis stage. The dependence analysis stage is similar to the wake-up select stage of out-of-order processors that decides which instructions have had all of their dependences satisfied and are therefore safe to execute. The implementation of the dependence analysis pipeline stage is covered in detail in Chapter 4. Once a task has all of its dependences satisfied (because all of its dependences have mapped), a task progresses to the mapping phase of the pipeline. The mapping phase is composed of two tightly coupled stages that are interchangeable depending on decisions made by the mapper for a task. The ordering of the mapping and distribution stages is determined by whether the mapper wants to map the task on the node where the task will run, which we call remote mapping, or map on the node where the task originated, which we call local mapping. When a task is remotely mapped, it is first sent to the target node during the distribution stage along with its meta-data and then it is mapped during the mapping stage onto the target processor. In the case where a task is locally mapped, it is mapped on the origin node and then sent to the target node to be executed. There is an obvious trade-off to be made by mappers here: mapping remotely permits more tasks to be mapped in parallel on different nodes, but requires movement of meta-data, while locally mapping a task does not require meta-data movement, but serializes some task mappings. We discuss this trade-off in more detail in Chapter 8</p>
+<p>task流水线首先要做依赖分析，以确定哪些任务可以运行以及哪些任务具有何种依赖性。根据 natural partial order on dependences ，可以保证依赖分析时不会死锁</p>
+</blockquote>
+<blockquote>
+<p>The execution stage of the Legion pipeline is nearly identical to the execution stage for instructions in hardware processors. In hardware, an instruction is assigned to an execution unit where it is performed. In Legion, tasks are assigned to a processor which then executes the task. The primary difference is that while instructions in hardware are not capable of generating new instructions, in Legion, the execution of a task can generate a new stream of sub-tasks that then must also be executed by the runtime. We discuss the implications of the hierarchical nature of streams of tasks in Section 3.2.3 The fifth stage of the pipeline is used for checking when speculation has been resolved. For tasks that are not predicated, this stage does not require any work. However, for tasks that were predicated and for which the mapper of the task chose to speculate on the predicate value (see Section 10.2.1), this is the stage where the results of the speculation are checked. If a task was correctly speculated, then this stage performs no work. However, if the speculation was incorrect, then work must be performed by the runtime to either re-execute the task if the speculative value of the predicate was incorrectly guessed to be false, or the results of the task must be undone if the value of the predicate was incorrectly guessed to be true. Furthermore, any tasks with dependences upon the mis-speculated task must also be rolled back. We discuss the details of this process in greater detail in Chapter 10. The sixth stage of the pipeline is the completion stage that determines when a task has finished executing. Due to Legion’s deferred execution model, it is possible for a task to finish its execution stage of the pipeline and continue to progress through the pipeline while the sub-tasks that it launched have yet to execute. The completion stage is the point where a task waits for all of its child tasks to reach the completion stage. It is important to note that this definition of completion is inductive: in order for a task to complete, all of its descendant tasks must already have completed. Once a task is complete, it has correctly executed and may propagate information such as the result of its future value. Tasks that depend on the completion of this task are also free to begin executing. However, for resiliency purposes this is not the final stage of the pipeline.</p>
+<p>第六阶段的 任务完成，确定任务何时完成了，包括子任务也都完成了才算完成。</p>
+</blockquote>
+<blockquote>
+<p>As we mentioned in Section 3.2.2, the Legion pipeline analogy does not directly align with hardware out-of-order pipelines due to the  hierarchical nature of the Legion programming model. In a Legion program the execution of task within the pipeline can result in an entirely new stream of sub-tasks with region requirements that need to be executed. The obvious question then is whether these tasks from different streams need to be considered when performing operations such as dependence analysis and mapping. Importantly, due to a crucial design decision introduced in the Legion programming model, tasks need only consider other tasks within the same stream (i.e. originating from the same parent task) when progressing through the stages of the task pipeline… Recall from Section 2.5.2 that a task is only permitted to request privileges on a subset of the regions and fields for which its parent task held privileges. This important property is sufficient to prove a useful theorem: if two tasks t1 and t2 are non-interfering, then all sub-tasks of t1 will be non-interfering with all sub-tasks of t2. The proof of this theorem is based on a formal operational semantics of the Legion programming model and is beyond the scope of this thesis. A full proof of the theorem can be found in [49]. The consequences of this theorem are profoundly important to the implementation of the Legion runtime. This theorem permits the Legion runtime to implement a hierarchical scheduling algorithm. Tasks only need to consider other tasks in the same stream (which all come from the same parent task) when traversing the task pipeline. Since all tasks in the same stream originate on the same node, no communication is necessary for performing dependence analysis. The hierarchical nature of the Legion task pipeline also allows many tasks to be traversing the task pipeline in parallel on different nodes. This property is essential to enabling Legion to scale well on thousands of nodes</p>
+<p>任务在流水线中，各个阶段只需要考虑同一个流中的其他任务。有个重要的关键的定义，如果两个任务 t1 和 t2 是互不干扰的，那么 t1 的所有子任务将不干扰 t2 的所有子任务。由于同一流中的所有任务都起源于同一节点，因此执行依赖性分析不需要通信。 Legion 任务管道的分层特性还允许许多任务在不同节点上并行遍历任务管道。对于使 Legion 能够在数千个节点上很好地扩展至关重要</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>HPC</category>
+      </categories>
+      <tags>
+        <tag>HPC</tag>
+        <tag>并发编程模型</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2022年终总结</title>
     <url>/archives/1ff43dbc.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="2022年终总结"><a class="markdownIt-Anchor" href="#2022年终总结"></a> 2022年终总结</h1>
@@ -1328,8 +1409,8 @@ Cppcheck是GNU通用公共许可证下的免费软件 。</p>
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>调试</tag>
         <tag>Visual Studio</tag>
+        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -1690,9 +1771,9 @@ public DbSet<Marx> marxes { get; set; }<br />
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>Visual Studio</tag>
         <tag>MVC</tag>
         <tag>.Net</tag>
+        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -2285,8 +2366,8 @@ repaint：刷新界面</p>
         <category>QT开发</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>QT</tag>
+        <tag>工具</tag>
         <tag>信号与槽函数</tag>
       </tags>
   </entry>
@@ -3158,8 +3239,8 @@ Windows 10 的同学，可以直接到应用商店装</p>
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>Python</tag>
+        <tag>工具</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
@@ -4443,8 +4524,8 @@ ok，这个时候我们输入我们要查的歌，I Want My Tears Back。我们�
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>Python</tag>
+        <tag>工具</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
