@@ -72,6 +72,51 @@ Figure 3.4 shows the different stages of the Legion runtime task pipeline2 . Eac
 <p>As we mentioned in Section 3.2.2, the Legion pipeline analogy does not directly align with hardware out-of-order pipelines due to the  hierarchical nature of the Legion programming model. In a Legion program the execution of task within the pipeline can result in an entirely new stream of sub-tasks with region requirements that need to be executed. The obvious question then is whether these tasks from different streams need to be considered when performing operations such as dependence analysis and mapping. Importantly, due to a crucial design decision introduced in the Legion programming model, tasks need only consider other tasks within the same stream (i.e. originating from the same parent task) when progressing through the stages of the task pipeline… Recall from Section 2.5.2 that a task is only permitted to request privileges on a subset of the regions and fields for which its parent task held privileges. This important property is sufficient to prove a useful theorem: if two tasks t1 and t2 are non-interfering, then all sub-tasks of t1 will be non-interfering with all sub-tasks of t2. The proof of this theorem is based on a formal operational semantics of the Legion programming model and is beyond the scope of this thesis. A full proof of the theorem can be found in [49]. The consequences of this theorem are profoundly important to the implementation of the Legion runtime. This theorem permits the Legion runtime to implement a hierarchical scheduling algorithm. Tasks only need to consider other tasks in the same stream (which all come from the same parent task) when traversing the task pipeline. Since all tasks in the same stream originate on the same node, no communication is necessary for performing dependence analysis. The hierarchical nature of the Legion task pipeline also allows many tasks to be traversing the task pipeline in parallel on different nodes. This property is essential to enabling Legion to scale well on thousands of nodes</p>
 <p>任务在流水线中，各个阶段只需要考虑同一个流中的其他任务。有个重要的关键的定义，如果两个任务 t1 和 t2 是互不干扰的，那么 t1 的所有子任务将不干扰 t2 的所有子任务。由于同一流中的所有任务都起源于同一节点，因此执行依赖性分析不需要通信。 Legion 任务管道的分层特性还允许许多任务在不同节点上并行遍历任务管道。对于使 Legion 能够在数千个节点上很好地扩展至关重要</p>
 </blockquote>
+<h2 id="iris"><a class="markdownIt-Anchor" href="#iris"></a> IRIS</h2>
+<h2 id="region"><a class="markdownIt-Anchor" href="#region"></a> Region</h2>
+<blockquote>
+<p>II. PROGRAMMING MODEL A core tenet guiding our design of Iris was to integrate well with Legion’s asynchronous task-based programming model with minimal changes. This was motivated in part by our desire to provide the same semantics for internally as well as externally managed resources, eliminating the need for the application developer to reason about distinct, perhaps orthogonal, semantics for these resources. This unified model also takes direct advantage of many of the underlying optimizations employed by the Legion implementation. While our current work focuses on Legion, many of the ideas in Iris are applicable to other programming systems such as Sequoia [2], Charm++ [3], and X10 [4]. We discuss this in more detail in Section VII. A. Legion’s Regions In Legion, a region names a data collection. Regions are first-class values in Legion and serve as the inputs and outputs of computation [1]. It is worth emphasizing that regions only name a data set. Regions are also mutable: computations may directly modify the contents of regions. Regions do not have to be materialized at all times, nor do they commit to any particular data layout or physical placement in a machine. A physical instance of a region is a copy of the region’s data with a particular data layout and stored in a specific place (e.g., on disk, in DRAM, in a GPU framebuffer, etc.). There may be 0, 1, or multiple physical instances of a region in existence at any time within Legion. Allowing multiple instances of a region is necessary for many optimizations, such as allowing multiple readers to each have a local copy of the data for more efficient access.</p>
+<p>IRIS 利用region去做local copy 以提供多个读取器进行读取，其中，region不会产生实际的数据布局，只有 物理实例才会存在特定位置，磁盘上、DRAM、GPU之类的地方。</p>
+</blockquote>
+<blockquote>
+<p>B. Legion’s Tasks Tasks are functions that perform computation on one or more regions. Each task maintains two properties for regions on which they operate: • Privileges specify how the task will access each region, which include read only, read-write, and reductions with a commutative reduction operator. • Coherence specifies how other potentially concurrent tasks may access the same region: exclusive access (task ordering must be preserved and no other task can appear to access the region concurrently), atomic access (tasks may be reordered, but no other task can appear to have concurrent access), and simultaneous coherence (visible updates from concurrent tasks are permitted). Tasks are issued to the Legion runtime system in sequential program order, but the underlying runtime system is free to perform optimizations that may reorder tasks and execute them in parallel provided the results are consistent with the serial order and the declared coherence modes on regions.</p>
+<p>task 的权限指定和一致性处理，可以让runtime根据其task的一致性指定情况进行动态分析处理，即原子性、独占性等等。</p>
+</blockquote>
+<blockquote>
+<p>C. Legion’s Deferred Execution Deferred execution decouples the launching of tasks from when the tasks are executed. The task launch operation returns immediately, and tasks are executed asynchronously by the runtime. Asynchronous launches can be composed: the results of launching task A may be passed as arguments to the asynchronous launch of task B, even if A has not yet completed. 1 Therefore, unless the program needs the result of a task launch to make a control-flow decision, all tasks are launched without any delay and tasks are never required to block on any Legion operation. Deferred execution allows Legion to hide long-latency operations by launching tasks well in advance of when they actually run, which allows Legion to discover other independent work that can be executed at the same time.</p>
+<p>延迟执行的处理可以将task的启动和执行进行分离，除非任务之间存在控制流的依赖性，否则所有任务都会立即启动，不会产生阻塞</p>
+<p>这可以将长延迟的操作隐藏掉（不阻塞）又可以利于legion去发现可以独立执行的task。（提前执行很多操作，有可能存在内存增加的风险，是否意味着这是一种空间换时间）</p>
+</blockquote>
+<blockquote>
+<p>D. Iris’s External Resources In Iris</p>
+<p>we model data and memory that is not exclusively owned and accessed by Iris as an external resource. A simple example of an external resource is a formatted file (e.g., an HDF5 file on disk) shared between an Iris application that checkpoints intermediate results into it and an external application that analyzes the results. Other examples of external resources include objects in key-value storage systems, databases in persistent storage, and opaque data produced by external applications. There are three problems we must address:</p>
+<p>IRIS的外部资源定义为不独占访问的数据和内存。因为外部资源与其他程序存在交互等情况需要解决几个问题</p>
+<p>• New primitives are required to associate an external resource with a region and also to remove such an association. We introduce two new operations, attach and detach, in Section II-E.</p>
+<p>• Iris tasks and external tasks may access the external resource concurrently necessitating some form of explicit synchronization. We use existing Legion operations for regions with simultaneous coherence, acquire and release, for this purpose. While these operations predate Iris, their semantics have not been previously presented in the literature; we provide an overview in Section II-F.</p>
+<p>• Supporting arbitrary external resources requires a mechanism for supporting arbitrary data formats/layouts. Our solution is presented in Section II-G.</p>
+<p>解决 外部资源与region联合的问题，引入 attach 和 detach</p>
+<p>使用Legion中的同步一致性</p>
+<p>外部资源需要支持各种各样的数据布局</p>
+</blockquote>
+<blockquote>
+<p>E. Attach and Detach<br />
+Attach integrates external resources into Iris by associating an external resource with a region. For example:<br />
+associates the region r with an external file. There are different versions of attach for each kind of external resource (see Section V-A). In Legion, a region is always associated with some data set (though this may be empty) and is always associated with zero or more physical instances. Thus, when attached to an external resource, the region must first be disassociated from its existing data. Attach invalidates all existing physical instances associated with the region and makes the external resource the only valid physical instance of the region. Figures 1a and 1b illustrate an example of attach in Iris. Before the attach operation, region r is mapped to three physical instances. The attach operation associates r with data in an external resource, as shown in Figure 1b. Attach invalidates all three existing instances and maps region r to the newly created external physical instance (i.e., instance 4). All subsequent tasks that use region r will now refer to instance 4. It is worth noting that no actual external I/O occurs as a result of the attach operation. The detach operation disassociates a region from its external resource. The Iris runtime defers the detach until all tasks using the attached region have completed.</p>
+<p>F. Acquire and Release As discussed in Section I, the regions attached to external resources have simultaneous coherence. Part of the semantics of simultaneous coherence is that tasks can see the updates of other tasks concurrently accessing the region, which implies that all the tasks use a single common physical instance. This design is appropriate in many situations but prevents optimizations that rely on cached local copies. For example, if an external resource resides on disk then by default Iris tasks must perform disk I/O every time they access the external resource. This can result in poor performance for tasks that make frequent changes to regions. In Legion, a task can create local copies (i.e., additional instances in faster memories) of a region r with simultaneous coherence by first issuing an acquire operation on r. The acquire indicates that no external task will access the region during the lifetime of the acquire so it is safe to allow the runtime to make copies of the data. In Iris, an acquire operation on a region attached to an external resource allows tasks to operate on local copies of the external data. When all tasks that use local copies have finished, a release operation invalidates all local copies by flushing any updates on these copies back to the original instance. The external resource is thereby brought back to a consistent state with the task updates to these temporary copies. The semantics for acquire and release are similar to release consistency [5]: all writes between acquire and release are visible to other tasks upon the release operation. Figure 1c and 1d illustrate acquire and release. In Figure 1b, region r is attached to an external resource (i.e instance 4). All subsequent tasks that use region r before an acquire operation access the external resource directly. In Figure 1c, the application launches an acquire operation which removes the copy restriction. Tasks that need r as input can then use local copies (i.e., instance 5). When the application has finished launching all tasks that need local copies of region r, it launches a release operation that flushes any local changes back to the external resource, and invalidates all local copies2 , as shown in Figure 1d.</p>
+<p>attach 操作可以将外部资源和region关联</p>
+<p>attach到外部资源的时候，会将region之前关联的数据解除关联，并且让region相关的物理实例全部失效。这就使外部资源成为region的唯一有效物理实例。</p>
+<p>attach操作不会产生实际的IO（即attach时跟实际IO是一个异步的操作）</p>
+<p>detach会接触region跟外部资源的关联，注意这时候runtime不会立马解除，会等所有跟外部资源相关的task都完成后才会操作</p>
+<p>Acquire 、Release，在处理外部资源一致性的时候有着重大作用，</p>
+<p>acquire会保证在acquire的生命周期内，没有外部的任务会访问到这个region，所以，这时候使用local copy的安全的。acquire时，允许task去操作local copy的外部资源数据</p>
+<p>当所有关于local copy的task都完成后，release则会将这些local copy的变化冲回到原理的物理实例上，然后将所有的local copy都失效。从而保证一致性</p>
+<p>值得注意的是，acquire和release是对所有任务可见的。</p>
+</blockquote>
+<blockquote>
+<p>G. Opaque Data Structures</p>
+<p>Iris supports attaching external data that is opaque to Iris, meaning its data layout is not understood by the runtime. In addition to providing the generality to support many external resources, there are specific use cases where opaque external resources are appropriate. For example, applications with security restrictions may need to hide the actual data from Iris and only expose a narrow interface. Another example is when the “data” is actually another application that only produces the data on demand. Finally, a common use case is a complex data structure whose format is application dependent and which may vary depending on input parameters, making encoding this format directly within Iris undesirable. To allow tasks to access opaque external resources, Iris provides a serdes (serialization-deserialization) interface for applications to describe how to serialize regions attached to opaque external resources into runtime managed buffers and how to deserialize these buffers when creating a new physical instance of the region in a destination memory. Figure 2 illustrates how Iris uses the serialization/deserialization mechanism to copy instances associated with opaque data structures. Instance 1 is initially attached to a collection of binary trees owned by an external application. The elements of the region r are just references to the roots of the trees, and tasks call functions in a binary tree library to do any required tree manipulations. Note that to make a copy of the region, it is not sufficient to simply copy the pointer contents—the binary trees themselves, which are external to the region, will need to be copied if the region is copied to a different address space (i.e., a different node). In Figure 2, when copying instance 1 to a remote node, Iris first serializes instance 1 to a DMA buffer on the local node. The DMA buffer contains all necessary information to reconstruct the binary trees. The Iris runtime then performs a bit-wise copy to transfer the DMA buffer to the destination node. Finally, the Iris runtime reconstructs a new instance (i.e., instance 2) on the destination node by deserializing the DMA buffer. An additional advantage of using a serialization/deserialization interface is that it allows highly compressible data to be transferred with minimum network bandwidth by first serializing the opaque structure into a compressed form and then deserializing it at the destination. Furthermore, the serialization/deserialization interface provides an additional mechanism for layout optimizations when moving data between internal and external resources in Legion.</p>
+<p>IRIS 支持附加任何类型的外部数据。为了适应这些不透明的外部数据，创建了一个 序列化和反序列化的机制，提供了一个缓冲区的buffer。这个序列化和反序列化的还可以提供高效率的网络传输功效。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>HPC</category>
@@ -1409,8 +1454,8 @@ Cppcheck是GNU通用公共许可证下的免费软件 。</p>
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>Visual Studio</tag>
         <tag>调试</tag>
+        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -1771,9 +1816,9 @@ public DbSet<Marx> marxes { get; set; }<br />
         <category>Visual Studio</category>
       </categories>
       <tags>
+        <tag>Visual Studio</tag>
         <tag>MVC</tag>
         <tag>.Net</tag>
-        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -2366,8 +2411,8 @@ repaint：刷新界面</p>
         <category>QT开发</category>
       </categories>
       <tags>
-        <tag>QT</tag>
         <tag>工具</tag>
+        <tag>QT</tag>
         <tag>信号与槽函数</tag>
       </tags>
   </entry>
@@ -3239,8 +3284,8 @@ Windows 10 的同学，可以直接到应用商店装</p>
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>工具</tag>
+        <tag>Python</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
@@ -4524,8 +4569,8 @@ ok，这个时候我们输入我们要查的歌，I Want My Tears Back。我们�
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>工具</tag>
+        <tag>Python</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
