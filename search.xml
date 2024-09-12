@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2023年终总结</title>
-    <url>/archives/marxcbr2023.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2023-年终总结"><a class="markdownIt-Anchor" href="#2023-年终总结"></a> 2023 年终总结</h2>
+    <title>2023已读书单</title>
+    <url>/archives/3b8e427.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2023已读书单"><a class="markdownIt-Anchor" href="#2023已读书单"></a> 2023已读书单</h2>
+<p>这些书本很大一部分来自一个我喜欢听的播客 “<a href="https://www.xiaoyuzhoufm.com/podcast/6013f9f58e2f7ee375cf4216">知行小酒馆</a>”，听他们分享投资与生活的知识收益颇多。此外还有一部分书籍来自亲人与朋友的推荐，非常感谢他们的推荐。</p>
+<blockquote>
+<p>《思考，快与慢》</p>
+<p>《通往自由之路》</p>
+<p>《投资第一课》</p>
+<p>《悉达多》</p>
+<p>《您厉害，您赚得多》</p>
+<p>《禅与摩托车维修艺术》</p>
+<p>《微习惯》</p>
+<p>《金钱心理学》</p>
+<p>《如何阅读一本书》</p>
+<p>《随机漫步的傻瓜》</p>
+<p>《雪球基金第一课》</p>
+<p>《漫步华尔街》</p>
+<p>《为什么伟大不能被计划》</p>
+<p>《文明、现代化、价值投资与中国》</p>
+<p>《纳瓦尔宝典》</p>
+<p>《芒格之道》</p>
+</blockquote>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202401312253143.png" alt="image-20240131225302514" /></p>
 ]]></content>
       <categories>
         <category>小日志</category>
@@ -869,8 +889,8 @@ cuckoo web</p>
         <category>信息安全</category>
       </categories>
       <tags>
-        <tag>虚拟机</tag>
         <tag>沙盒</tag>
+        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -3480,8 +3500,8 @@ emmm，拍出来的照片，还真有点复古的感觉耶</p>
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>ADB</tag>
+        <tag>Android</tag>
         <tag>有趣的东西</tag>
       </tags>
   </entry>
@@ -3549,8 +3569,8 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>ADB</tag>
+        <tag>Android</tag>
         <tag>有趣的东西</tag>
       </tags>
   </entry>
