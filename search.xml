@@ -65,6 +65,36 @@
       </tags>
   </entry>
   <entry>
+    <title>在Hexo博客中拉起Google Adsense广告</title>
+    <url>/archives/c67b7fef.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="在hexo博客中拉起google-adsense广告"><a class="markdownIt-Anchor" href="#在hexo博客中拉起google-adsense广告"></a> 在Hexo博客中拉起Google Adsense广告</h3>
+<p>近段时间看到了Google Adsense的几个广告，他们之间硬生生怼到我邮箱里面，那我转念一想，我的博客一直都有不少访客，在访问我写过的那些可能没啥用的文章。话说，也是真的神奇，我这小破站没有做过任何SEO，也没搞过什么其他的操作。就这么静静的躺在这里，竟然也有四万多五万的访问量。希望这几万位访客可以在我的文章中获取到他们所需要的信息。不过，现在ChatGPT、llama模型之类的大语言模型很大程度上已经替代了我们这种独立博客的文章。毕竟，一问就可以得到一个相对较为准确的答案，实在是太方便，太香了。</p>
+<p>but，anyway，我还是浅浅的去Google Adsense里面注册好了我的账号，其实也不算注册，直接用谷歌账号登进去就好了。然后就是做网站认证</p>
+<p>然后，找到广告、按网站，找到这个地方之后，点击 获取代码 ，即可弹出这个窗口，将这个脚本给获取到</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082244580.png" alt="image-20241008222458334" style="zoom:80%;" />
+<p>接下来就得把这个脚本给弄到网站里面去，HEXO有个很便捷的地方可以直接把这段代码插到网页中</p>
+<p>我用的是butterfly主题，就在主题下面的_config.yml找到inject的配置，如下所示，黏贴进去就好了</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082243083.png" alt="image-20241008222721921" style="zoom:80%;" />
+<p>然后，重新 hexo g ，hexo d，部署上去之后，就可以用F12 找到这个script，如下所示，就是成功的插进去了</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082243134.png" alt="image-20241008222937262" style="zoom:80%;" />
+<p>插进去之后，就可以进行广告审查了，这大概需要几天的时间。</p>
+<p>不过，等待了几天的时间后，居然显示我的网站并未通过审查</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082216157.png" alt="image-20241008221616074" style="zoom:80%;" />
+<p>他会显示审核未通过的原因，他这里显示的原因是 <strong>低价值内容</strong></p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082243561.png" alt="image-20241008223410951" style="zoom:80%;" />
+<p>WTF，怎么会？我文章写的内容这么详尽，这么多用户喜欢，还有不少读者遇到问题都还给我发邮件去请教讨论问题。不过，这些东西并不能直观的反映在博客的网站中，如果这个过程也能被称作低价值，哈哈哈，那就当我没说。</p>
+<p>后续，重新提交一次审批申请，我相信他们可以重新审视博客的内容，并且给予通过。</p>
+<p>虽然一点点Google Adsense的广告费并不能带来多大的收益，好歹能平衡一下我阿里云OSS的费用还有服务器的费用也好哇</p>
+<p>后面如果审批通过，开通了这个广告，就可以选择各种地方来展示广告。当然了，广告还是要节制，不能影响到正常的阅读和体验。</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082245221.png" alt="image-20241008224553322" style="zoom:80%;" />]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2023已读书单</title>
     <url>/archives/3b8e427.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2023已读书单"><a class="markdownIt-Anchor" href="#2023已读书单"></a> 2023已读书单</h2>
@@ -539,8 +569,8 @@
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>Visual Studio</tag>
         <tag>调试</tag>
+        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -953,8 +983,8 @@ cuckoo web</p>
         <category>信息安全</category>
       </categories>
       <tags>
-        <tag>虚拟机</tag>
         <tag>沙盒</tag>
+        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -1407,8 +1437,8 @@ Cppcheck是GNU通用公共许可证下的免费软件 。</p>
         <category>Visual Studio</category>
       </categories>
       <tags>
-        <tag>Visual Studio</tag>
         <tag>调试</tag>
+        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -1769,9 +1799,9 @@ public DbSet<Marx> marxes { get; set; }<br />
         <category>Visual Studio</category>
       </categories>
       <tags>
+        <tag>Visual Studio</tag>
         <tag>MVC</tag>
         <tag>.Net</tag>
-        <tag>Visual Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -2364,8 +2394,8 @@ repaint：刷新界面</p>
         <category>QT开发</category>
       </categories>
       <tags>
-        <tag>QT</tag>
         <tag>工具</tag>
+        <tag>QT</tag>
         <tag>信号与槽函数</tag>
       </tags>
   </entry>
@@ -3237,8 +3267,8 @@ Windows 10 的同学，可以直接到应用商店装</p>
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>工具</tag>
+        <tag>Python</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
@@ -4522,8 +4552,8 @@ ok，这个时候我们输入我们要查的歌，I Want My Tears Back。我们�
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>工具</tag>
+        <tag>Python</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
