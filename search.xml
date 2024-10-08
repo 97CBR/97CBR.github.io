@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用Github Action自动部署HEXO博客</title>
+    <url>/archives/f2ce5625.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="使用github-action自动部署hexo博客"><a class="markdownIt-Anchor" href="#使用github-action自动部署hexo博客"></a> 使用Github Action自动部署HEXO博客</h2>
+<h3 id="絮絮叨叨"><a class="markdownIt-Anchor" href="#絮絮叨叨"></a> 絮絮叨叨</h3>
+<p>GitHub 支持 Action进行CI操作已经很多年了。似乎是从2020年就已经开始支持，从那时开始就打算使用GitHub Action来自动化部署我的博客。</p>
+<p>用GitHub Action 有很多好处，只管在编辑器中编写markdown格式的博客原稿就好了，不再需要在本地部署node以及hexo的那一大堆依赖，很容易就可以在不同的地方写博客。换句话说，让写博客更纯粹，只需关注写的内容即可。</p>
+<p>但是由于近来几年更新少，所以就一直没搞这套操作。趁着国庆的时间，好好的看了一些关于Github Action的资料，准备把这个CI给用起来。相信搞完之后，以后提交博客文章就可以在Action界面看到CI的执行状态。就像在公司提交代码时一样~</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158851.png" alt="image-20241008212334947" /></p>
+<h3 id="行动起来"><a class="markdownIt-Anchor" href="#行动起来"></a> 行动起来</h3>
+<p>简明扼要的开始记录折腾步骤</p>
+<p>先去用户设置创建一个token</p>
+<ol>
+<li>
+<p>进入设置</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158172.png" alt="image-20241008205826994" style="zoom:67%;" />
+</li>
+<li>
+<p>左下角进入 Developer setting</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158810.png" alt="image-20241008210118133" style="zoom:80%;" />
+</li>
+<li>
+<p>到Token classic 里面去生成一个新的token</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158308.png" alt="image-20241008210221971" style="zoom:80%;" />
+</li>
+<li>
+<p>填写自己的token名，然后勾选仓库和workflow的权限，然后点生成token</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158971.png" alt="image-20241008210504382" style="zoom:80%;" />
+</li>
+<li>
+<p>接着就复制token，存好到一个地方，比如在微信文件助手里面给自己发一下</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158769.png" alt="image-20241008210737941" style="zoom:80%;" />
+</li>
+<li>
+<p>去hexo源码仓，就是我们提交post文章的仓里，创建一个secrets</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082158920.png" alt="image-20241008211156866" style="zoom:80%;" />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082159221.png" alt="image-20241008211323682" style="zoom:80%;" />
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082159969.png" alt="image-20241008211303765" style="zoom:80%;" />
+</li>
+<li>
+<p>到仓库的Action页面查看<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082159362.png" alt="image-20241008213844439" style="zoom:80%;" /></p>
+</li>
+</ol>
+<p>CI界面还可以看到所有workflow的执行记录，非常奈斯</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082202107.png" alt="image-20241008220229821" /></p>
+<p>如果出现了错误，可以直观的在错误日志里面看到错误的信息，以便于后续修改CI脚本或者其他的内容</p>
+<img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082205174.png" alt="image-20241008220439858" style="zoom:80%;" />
+<h3 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h3>
+<p>成功部署之后可以在被部署的仓库看到提交的记录</p>
+<p><img src="https://marxcbr.oss-cn-shenzhen.aliyuncs.com/Blog/202410082209255.png" alt="image-20241008220905720" /></p>
+<h3 id="最终的action脚本"><a class="markdownIt-Anchor" href="#最终的action脚本"></a> 最终的Action脚本</h3>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">CI</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line"></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">GIT_USER:</span> <span class="string">写你自己的</span></span><br><span class="line">  <span class="attr">GIT_EMAIL:</span> <span class="string">写你自己的</span></span><br><span class="line">  <span class="attr">THEME_REPO:</span> <span class="string">写你自己的源码仓地址</span></span><br><span class="line">  <span class="attr">THEME_BRANCH:</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">DEPLOY_REPO:</span> <span class="string">写你自己的HEXO</span> <span class="string">public仓地址，是名字带</span> <span class="string">.github.io</span> <span class="string">的仓</span></span><br><span class="line">  <span class="attr">DEPLOY_BRANCH:</span> <span class="string">main</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">permissions:</span></span><br><span class="line">      <span class="attr">contents:</span> <span class="string">read</span></span><br><span class="line">      <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Build</span> <span class="string">on</span> <span class="string">node</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node_version</span> <span class="string">&#125;&#125;</span> <span class="string">and</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.os</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">strategy:</span></span><br><span class="line">      <span class="attr">matrix:</span></span><br><span class="line">        <span class="attr">os:</span> [<span class="string">ubuntu-latest</span>]</span><br><span class="line">        <span class="attr">node_version:</span> [<span class="number">20.</span><span class="string">x</span>]</span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">theme</span> <span class="string">repo</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">repository:</span> <span class="string">$&#123;&#123;</span> <span class="string">env.THEME_REPO</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">ref:</span> <span class="string">$&#123;&#123;</span> <span class="string">env.THEME_BRANCH</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">theme_build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node_version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node_version</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Hexo</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">cd</span> <span class="string">./theme_build</span></span><br><span class="line">          <span class="string">pwd</span></span><br><span class="line">          <span class="string">ls</span> <span class="string">-l</span></span><br><span class="line">          <span class="string">yarn</span></span><br><span class="line">          <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-util</span> <span class="string">hexo-cli</span> <span class="string">hexo-deployer-git</span> <span class="string">-g</span></span><br><span class="line">      </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">cd</span> <span class="string">./theme_build</span></span><br><span class="line">          <span class="string">hexo</span> <span class="string">clean</span></span><br><span class="line">          <span class="string">hexo</span> <span class="string">g</span></span><br><span class="line">          <span class="string">ls</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">deploy</span> <span class="string">repo</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">repository:</span> <span class="string">$&#123;&#123;</span> <span class="string">env.DEPLOY_REPO</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">ref:</span> <span class="string">$&#123;&#123;</span> <span class="string">env.DEPLOY_BRANCH</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">.deploy_git</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Copy</span> <span class="string">hexo</span> <span class="string">public</span> <span class="string">to</span> <span class="string">Deployed</span> <span class="string">Repo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">cp</span> <span class="string">-r</span> <span class="string">./theme_build/public/*</span> <span class="string">.deploy_git/</span></span><br><span class="line">          <span class="string">ls</span> <span class="string">.deploy_git/</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.DELOPY_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">.deploy_git</span></span><br><span class="line">          <span class="attr">external_repository:</span> <span class="string">$&#123;&#123;env.DEPLOY_REPO&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">$&#123;&#123;</span> <span class="string">env.DEPLOY_BRANCH</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">commit_message:</span> <span class="string">&quot;Auto Delopy by CI&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<p>爽！！！就一个字</p>
+<p>在CI里面，我加了很多乱七八糟的打印和各种垃圾东西，还有这个Action的yaml参考了很多很多的文章，打开的标签页实在太多，已经找不到参考的是谁的了。只能说，感谢各位大神的无私分享，让我东拼西凑出一个Action，感谢</p>
+]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>CI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2023已读书单</title>
     <url>/archives/3b8e427.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="2023已读书单"><a class="markdownIt-Anchor" href="#2023已读书单"></a> 2023已读书单</h2>
@@ -2300,8 +2364,8 @@ repaint：刷新界面</p>
         <category>QT开发</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>QT</tag>
+        <tag>工具</tag>
         <tag>信号与槽函数</tag>
       </tags>
   </entry>
@@ -3173,8 +3237,8 @@ Windows 10 的同学，可以直接到应用商店装</p>
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>Python</tag>
+        <tag>工具</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
@@ -3500,8 +3564,8 @@ emmm，拍出来的照片，还真有点复古的感觉耶</p>
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>ADB</tag>
+        <tag>Android</tag>
         <tag>有趣的东西</tag>
       </tags>
   </entry>
@@ -3569,8 +3633,8 @@ ADB是一个通用命令行工具，其允许您与模拟器实例或连接的 A
         <category>Android</category>
       </categories>
       <tags>
-        <tag>Android</tag>
         <tag>ADB</tag>
+        <tag>Android</tag>
         <tag>有趣的东西</tag>
       </tags>
   </entry>
@@ -4458,8 +4522,8 @@ ok，这个时候我们输入我们要查的歌，I Want My Tears Back。我们�
         <category>爬虫</category>
       </categories>
       <tags>
-        <tag>工具</tag>
         <tag>Python</tag>
+        <tag>工具</tag>
         <tag>爬虫</tag>
       </tags>
   </entry>
