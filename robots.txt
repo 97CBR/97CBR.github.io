@@ -14,5 +14,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /lib/
 
-Sitemap: https://blog.marxcbr.cn/sitemap.xml
-Sitemap: https://blog.marxcbr.cn/baidusitemap.xml
+Sitemap: https://www.marxcbr.cn/sitemap.xml
+Sitemap: https://www.marxcbr.cn/baidusitemap.xml
